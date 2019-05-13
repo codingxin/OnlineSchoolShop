@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zhang.ssmschoolshop.dao.ActivityMapper">
+  <resultMap id="BaseResultMap" type="com.zhang.ssmschoolshop.entity.Activity">
+    <id column="activityId" jdbcType="INTEGER" property="activityid" />
+    <result column="activityName" jdbcType="VARCHAR" property="activityname" />
+    <result column="activityDes" jdbcType="VARCHAR" property="activitydes" />
+    <result column="discount" jdbcType="REAL" property="discount" />
+    <result column="fullPrice" jdbcType="INTEGER" property="fullprice" />
+    <result column="reducePrice" jdbcType="INTEGER" property="reduceprice" />
+    <result column="fullNum" jdbcType="INTEGER" property="fullnum" />
+    <result column="reduceNum" jdbcType="INTEGER" property="reducenum" />
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    activityId, activityName, activityDes, discount, fullPrice, reducePrice, fullNum, 
+    reduceNum
+  </sql>
+  <select id="selectByExample" parameterType="com.zhang.ssmschoolshop.entity.ActivityExample" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from activity
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from activity
+    where activityId = #{activityid,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from activity
+    where activityId = #{activityid,jdbcType=INTEGER}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.zhang.ssmschoolshop.entity.ActivityExample">
+    delete from activity
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.zhang.ssmschoolshop.entity.Activity">
+    insert into activity (activityId, activityName, activityDes, 
+      discount, fullPrice, reducePrice, 
+      fullNum, reduceNum)
+    values (#{activityid,jdbcType=INTEGER}, #{activityname,jdbcType=VARCHAR}, #{activitydes,jdbcType=VARCHAR}, 
+      #{discount,jdbcType=REAL}, #{fullprice,jdbcType=INTEGER}, #{reduceprice,jdbcType=INTEGER}, 
+      #{fullnum,jdbcType=INTEGER}, #{reducenum,jdbcType=INTEGER})
+  </insert>
+  <insert id="insertSelective" parameterType="com.zhang.ssmschoolshop.entity.Activity">
+    insert into activity
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="activityid != null">
+        activityId,
+      </if>
+      <if test="activityname != null">
+        activityName,
+      </if>
+      <if test="activitydes != null">
+        activityDes,
+      </if>
+      <if test="discount != null">
+        discount,
+      </if>
+      <if test="fullprice != null">
+        fullPrice,
+      </if>
+      <if test="reduceprice != null">
+        reducePrice,
+      </if>
+      <if test="fullnum != null">
+        fullNum,
+      </if>
+      <if test="reducenum != null">
+        reduceNum,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="activityid != null">
+        #{activityid,jdbcType=INTEGER},
+      </if>
+      <if test="activityname != null">
+        #{activityname,jdbcType=VARCHAR},
+      </if>
+      <if test="activitydes != null">
+        #{activitydes,jdbcType=VARCHAR},
+      </if>
+      <if test="discount != null">
+        #{discount,jdbcType=REAL},
+      </if>
+      <if test="fullprice != null">
+        #{fullprice,jdbcType=INTEGER},
+      </if>
+      <if test="reduceprice != null">
+        #{reduceprice,jdbcType=INTEGER},
+      </if>
+      <if test="fullnum != null">
+        #{fullnum,jdbcType=INTEGER},
+      </if>
+      <if test="reducenum != null">
+        #{reducenum,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.zhang.ssmschoolshop.entity.ActivityExample" resultType="java.lang.Long">
+    select count(*) from activity
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map">
+    update activity
+    <set>
+      <if test="record.activityid != null">
+        activityId = #{record.activityid,jdbcType=INTEGER},
+      </if>
+      <if test="record.activityname != null">
+        activityName = #{record.activityname,jdbcType=VARCHAR},
+      </if>
+      <if test="record.activitydes != null">
+        activityDes = #{record.activitydes,jdbcType=VARCHAR},
+      </if>
+      <if test="record.discount != null">
+        discount = #{record.discount,jdbcType=REAL},
+      </if>
+      <if test="record.fullprice != null">
+        fullPrice = #{record.fullprice,jdbcType=INTEGER},
+      </if>
+      <if test="record.reduceprice != null">
+        reducePrice = #{record.reduceprice,jdbcType=INTEGER},
+      </if>
+      <if test="record.fullnum != null">
+        fullNum = #{record.fullnum,jdbcType=INTEGER},
+      </if>
+      <if test="record.reducenum != null">
+        reduceNum = #{record.reducenum,jdbcType=INTEGER},
+      </if>
+    </set>
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map">
+    update activity
+    set activityId = #{record.activityid,jdbcType=INTEGER},
+      activityName = #{record.activityname,jdbcType=VARCHAR},
+      activityDes = #{record.activitydes,jdbcType=VARCHAR},
+      discount = #{record.discount,jdbcType=REAL},
+      fullPrice = #{record.fullprice,jdbcType=INTEGER},
+      reducePrice = #{record.reduceprice,jdbcType=INTEGER},
+      fullNum = #{record.fullnum,jdbcType=INTEGER},
+      reduceNum = #{record.reducenum,jdbcType=INTEGER}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.zhang.ssmschoolshop.entity.Activity">
+    update activity
+    <set>
+      <if test="activityname != null">
+        activityName = #{activityname,jdbcType=VARCHAR},
+      </if>
+      <if test="activitydes != null">
+        activityDes = #{activitydes,jdbcType=VARCHAR},
+      </if>
+      <if test="discount != null">
+        discount = #{discount,jdbcType=REAL},
+      </if>
+      <if test="fullprice != null">
+        fullPrice = #{fullprice,jdbcType=INTEGER},
+      </if>
+      <if test="reduceprice != null">
+        reducePrice = #{reduceprice,jdbcType=INTEGER},
+      </if>
+      <if test="fullnum != null">
+        fullNum = #{fullnum,jdbcType=INTEGER},
+      </if>
+      <if test="reducenum != null">
+        reduceNum = #{reducenum,jdbcType=INTEGER},
+      </if>
+    </set>
+    where activityId = #{activityid,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.zhang.ssmschoolshop.entity.Activity">
+    update activity
+    set activityName = #{activityname,jdbcType=VARCHAR},
+      activityDes = #{activitydes,jdbcType=VARCHAR},
+      discount = #{discount,jdbcType=REAL},
+      fullPrice = #{fullprice,jdbcType=INTEGER},
+      reducePrice = #{reduceprice,jdbcType=INTEGER},
+      fullNum = #{fullnum,jdbcType=INTEGER},
+      reduceNum = #{reducenum,jdbcType=INTEGER}
+    where activityId = #{activityid,jdbcType=INTEGER}
+  </update>
+</mapper>

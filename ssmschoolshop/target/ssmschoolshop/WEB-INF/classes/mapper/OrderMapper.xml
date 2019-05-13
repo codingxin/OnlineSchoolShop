@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zhang.ssmschoolshop.dao.OrderMapper">
+  <resultMap id="BaseResultMap" type="com.zhang.ssmschoolshop.entity.Order">
+    <id column="orderId" jdbcType="INTEGER" property="orderid" />
+    <result column="userId" jdbcType="INTEGER" property="userid" />
+    <result column="orderTime" jdbcType="TIMESTAMP" property="ordertime" />
+    <result column="oldPrice" jdbcType="REAL" property="oldprice" />
+    <result column="newPrice" jdbcType="REAL" property="newprice" />
+    <result column="isPay" jdbcType="BIT" property="ispay" />
+    <result column="isSend" jdbcType="BIT" property="issend" />
+    <result column="isReceive" jdbcType="BIT" property="isreceive" />
+    <result column="isComplete" jdbcType="BIT" property="iscomplete" />
+    <result column="addressId" jdbcType="INTEGER" property="addressid" />
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    orderId, userId, orderTime, oldPrice, newPrice, isPay, isSend, isReceive, isComplete, 
+    addressId
+  </sql>
+  <select id="selectByExample" parameterType="com.zhang.ssmschoolshop.entity.OrderExample" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from indent
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from indent
+    where orderId = #{orderid,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from indent
+    where orderId = #{orderid,jdbcType=INTEGER}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.zhang.ssmschoolshop.entity.OrderExample">
+    delete from indent
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.zhang.ssmschoolshop.entity.Order">
+    insert into indent (orderId, userId, orderTime, 
+      oldPrice, newPrice, isPay, isSend, 
+      isReceive, isComplete, addressId
+      )
+    values (#{orderid,jdbcType=INTEGER}, #{userid,jdbcType=INTEGER}, #{ordertime,jdbcType=TIMESTAMP}, 
+      #{oldprice,jdbcType=REAL}, #{newprice,jdbcType=REAL}, #{ispay,jdbcType=BIT}, #{issend,jdbcType=BIT}, 
+      #{isreceive,jdbcType=BIT}, #{iscomplete,jdbcType=BIT}, #{addressid,jdbcType=INTEGER}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.zhang.ssmschoolshop.entity.Order" useGeneratedKeys="true" keyProperty="orderid">
+    insert into indent
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="orderid != null">
+        orderId,
+      </if>
+      <if test="userid != null">
+        userId,
+      </if>
+      <if test="ordertime != null">
+        orderTime,
+      </if>
+      <if test="oldprice != null">
+        oldPrice,
+      </if>
+      <if test="newprice != null">
+        newPrice,
+      </if>
+      <if test="ispay != null">
+        isPay,
+      </if>
+      <if test="issend != null">
+        isSend,
+      </if>
+      <if test="isreceive != null">
+        isReceive,
+      </if>
+      <if test="iscomplete != null">
+        isComplete,
+      </if>
+      <if test="addressid != null">
+        addressId,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="orderid != null">
+        #{orderid,jdbcType=INTEGER},
+      </if>
+      <if test="userid != null">
+        #{userid,jdbcType=INTEGER},
+      </if>
+      <if test="ordertime != null">
+        #{ordertime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="oldprice != null">
+        #{oldprice,jdbcType=REAL},
+      </if>
+      <if test="newprice != null">
+        #{newprice,jdbcType=REAL},
+      </if>
+      <if test="ispay != null">
+        #{ispay,jdbcType=BIT},
+      </if>
+      <if test="issend != null">
+        #{issend,jdbcType=BIT},
+      </if>
+      <if test="isreceive != null">
+        #{isreceive,jdbcType=BIT},
+      </if>
+      <if test="iscomplete != null">
+        #{iscomplete,jdbcType=BIT},
+      </if>
+      <if test="addressid != null">
+        #{addressid,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.zhang.ssmschoolshop.entity.OrderExample" resultType="java.lang.Long">
+    select count(*) from indent
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map">
+    update indent
+    <set>
+      <if test="record.orderid != null">
+        orderId = #{record.orderid,jdbcType=INTEGER},
+      </if>
+      <if test="record.userid != null">
+        userId = #{record.userid,jdbcType=INTEGER},
+      </if>
+      <if test="record.ordertime != null">
+        orderTime = #{record.ordertime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.oldprice != null">
+        oldPrice = #{record.oldprice,jdbcType=REAL},
+      </if>
+      <if test="record.newprice != null">
+        newPrice = #{record.newprice,jdbcType=REAL},
+      </if>
+      <if test="record.ispay != null">
+        isPay = #{record.ispay,jdbcType=BIT},
+      </if>
+      <if test="record.issend != null">
+        isSend = #{record.issend,jdbcType=BIT},
+      </if>
+      <if test="record.isreceive != null">
+        isReceive = #{record.isreceive,jdbcType=BIT},
+      </if>
+      <if test="record.iscomplete != null">
+        isComplete = #{record.iscomplete,jdbcType=BIT},
+      </if>
+      <if test="record.addressid != null">
+        addressId = #{record.addressid,jdbcType=INTEGER},
+      </if>
+    </set>
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map">
+    update indent
+    set orderId = #{record.orderid,jdbcType=INTEGER},
+      userId = #{record.userid,jdbcType=INTEGER},
+      orderTime = #{record.ordertime,jdbcType=TIMESTAMP},
+      oldPrice = #{record.oldprice,jdbcType=REAL},
+      newPrice = #{record.newprice,jdbcType=REAL},
+      isPay = #{record.ispay,jdbcType=BIT},
+      isSend = #{record.issend,jdbcType=BIT},
+      isReceive = #{record.isreceive,jdbcType=BIT},
+      isComplete = #{record.iscomplete,jdbcType=BIT},
+      addressId = #{record.addressid,jdbcType=INTEGER}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.zhang.ssmschoolshop.entity.Order">
+    update indent
+    <set>
+      <if test="userid != null">
+        userId = #{userid,jdbcType=INTEGER},
+      </if>
+      <if test="ordertime != null">
+        orderTime = #{ordertime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="oldprice != null">
+        oldPrice = #{oldprice,jdbcType=REAL},
+      </if>
+      <if test="newprice != null">
+        newPrice = #{newprice,jdbcType=REAL},
+      </if>
+      <if test="ispay != null">
+        isPay = #{ispay,jdbcType=BIT},
+      </if>
+      <if test="issend != null">
+        isSend = #{issend,jdbcType=BIT},
+      </if>
+      <if test="isreceive != null">
+        isReceive = #{isreceive,jdbcType=BIT},
+      </if>
+      <if test="iscomplete != null">
+        isComplete = #{iscomplete,jdbcType=BIT},
+      </if>
+      <if test="addressid != null">
+        addressId = #{addressid,jdbcType=INTEGER},
+      </if>
+    </set>
+    where orderId = #{orderid,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.zhang.ssmschoolshop.entity.Order">
+    update indent
+    set userId = #{userid,jdbcType=INTEGER},
+      orderTime = #{ordertime,jdbcType=TIMESTAMP},
+      oldPrice = #{oldprice,jdbcType=REAL},
+      newPrice = #{newprice,jdbcType=REAL},
+      isPay = #{ispay,jdbcType=BIT},
+      isSend = #{issend,jdbcType=BIT},
+      isReceive = #{isreceive,jdbcType=BIT},
+      isComplete = #{iscomplete,jdbcType=BIT},
+      addressId = #{addressid,jdbcType=INTEGER}
+    where orderId = #{orderid,jdbcType=INTEGER}
+  </update>
+</mapper>

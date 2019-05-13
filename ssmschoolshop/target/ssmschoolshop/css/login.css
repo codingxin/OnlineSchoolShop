@@ -1,0 +1,20 @@
+.form-login {
+	margin-top: 15%;
+	/* background-image: url(../image/tao.jpg); */
+}
+
+body {
+	/* background-image: url(../image/tao.jpg); */
+}
+
+.login-h2 {
+	margin-left: 25px;
+}
+
+.form-register {
+	margin-top: 6%;
+}
+
+.error {
+	color: red;
+}

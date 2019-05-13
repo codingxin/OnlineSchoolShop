@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zhang.ssmschoolshop.dao.ChatMapper">
+  <resultMap id="BaseResultMap" type="com.zhang.ssmschoolshop.entity.Chat">
+    <id column="chatId" jdbcType="INTEGER" property="chatid" />
+    <result column="sendUser" jdbcType="INTEGER" property="senduser" />
+    <result column="receiveUser" jdbcType="INTEGER" property="receiveuser" />
+    <result column="MsgContent" jdbcType="VARCHAR" property="msgcontent" />
+    <result column="MsgTime" jdbcType="TIMESTAMP" property="msgtime" />
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    chatId, sendUser, receiveUser, MsgContent, MsgTime
+  </sql>
+  <select id="selectByExample" parameterType="com.zhang.ssmschoolshop.entity.ChatExample" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from chat
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from chat
+    where chatId = #{chatid,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from chat
+    where chatId = #{chatid,jdbcType=INTEGER}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.zhang.ssmschoolshop.entity.ChatExample">
+    delete from chat
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.zhang.ssmschoolshop.entity.Chat">
+    insert into chat (chatId, sendUser, receiveUser, 
+      MsgContent, MsgTime)
+    values (#{chatid,jdbcType=INTEGER}, #{senduser,jdbcType=INTEGER}, #{receiveuser,jdbcType=INTEGER}, 
+      #{msgcontent,jdbcType=VARCHAR}, #{msgtime,jdbcType=TIMESTAMP})
+  </insert>
+  <insert id="insertSelective" parameterType="com.zhang.ssmschoolshop.entity.Chat">
+    insert into chat
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="chatid != null">
+        chatId,
+      </if>
+      <if test="senduser != null">
+        sendUser,
+      </if>
+      <if test="receiveuser != null">
+        receiveUser,
+      </if>
+      <if test="msgcontent != null">
+        MsgContent,
+      </if>
+      <if test="msgtime != null">
+        MsgTime,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="chatid != null">
+        #{chatid,jdbcType=INTEGER},
+      </if>
+      <if test="senduser != null">
+        #{senduser,jdbcType=INTEGER},
+      </if>
+      <if test="receiveuser != null">
+        #{receiveuser,jdbcType=INTEGER},
+      </if>
+      <if test="msgcontent != null">
+        #{msgcontent,jdbcType=VARCHAR},
+      </if>
+      <if test="msgtime != null">
+        #{msgtime,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.zhang.ssmschoolshop.entity.ChatExample" resultType="java.lang.Long">
+    select count(*) from chat
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map">
+    update chat
+    <set>
+      <if test="record.chatid != null">
+        chatId = #{record.chatid,jdbcType=INTEGER},
+      </if>
+      <if test="record.senduser != null">
+        sendUser = #{record.senduser,jdbcType=INTEGER},
+      </if>
+      <if test="record.receiveuser != null">
+        receiveUser = #{record.receiveuser,jdbcType=INTEGER},
+      </if>
+      <if test="record.msgcontent != null">
+        MsgContent = #{record.msgcontent,jdbcType=VARCHAR},
+      </if>
+      <if test="record.msgtime != null">
+        MsgTime = #{record.msgtime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map">
+    update chat
+    set chatId = #{record.chatid,jdbcType=INTEGER},
+      sendUser = #{record.senduser,jdbcType=INTEGER},
+      receiveUser = #{record.receiveuser,jdbcType=INTEGER},
+      MsgContent = #{record.msgcontent,jdbcType=VARCHAR},
+      MsgTime = #{record.msgtime,jdbcType=TIMESTAMP}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.zhang.ssmschoolshop.entity.Chat">
+    update chat
+    <set>
+      <if test="senduser != null">
+        sendUser = #{senduser,jdbcType=INTEGER},
+      </if>
+      <if test="receiveuser != null">
+        receiveUser = #{receiveuser,jdbcType=INTEGER},
+      </if>
+      <if test="msgcontent != null">
+        MsgContent = #{msgcontent,jdbcType=VARCHAR},
+      </if>
+      <if test="msgtime != null">
+        MsgTime = #{msgtime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where chatId = #{chatid,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.zhang.ssmschoolshop.entity.Chat">
+    update chat
+    set sendUser = #{senduser,jdbcType=INTEGER},
+      receiveUser = #{receiveuser,jdbcType=INTEGER},
+      MsgContent = #{msgcontent,jdbcType=VARCHAR},
+      MsgTime = #{msgtime,jdbcType=TIMESTAMP}
+    where chatId = #{chatid,jdbcType=INTEGER}
+  </update>
+</mapper>

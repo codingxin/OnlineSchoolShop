@@ -1,0 +1,117 @@
+/**{
+    margin:0px;
+    padding:0px;
+}
+*/
+body{
+    background:#e5e6d0;
+}
+
+.favorite {
+    margin-top: 2%;
+}
+
+.favorite-side {
+    margin-top: 2%;
+    width: 30%;
+}
+
+.fav-menu {
+    margin-top: 5%;
+}
+
+.fav-menu,#banner,#main-fav,#footer{
+    /*margin-top:1%;*/
+    /*width:1140px;*/
+}
+
+.caret-right {
+    position: absolute;
+    top: 22px;
+    left: 210px;
+}
+
+/* 万能的清除*/
+.clear{
+    clear:both;
+}
+.fav-menu{
+    padding-top:1px;
+}
+.fav-menu ul{
+    list-style:none;
+    /*padding-left: 15px;*/
+}
+.fav-menu>ul{
+    /*list-style:none;*/
+    padding-left: 15px;
+}
+
+.top-li {
+    border-top: 1px solid #FFFFFF;
+}
+
+.fav-menu ul li{
+    /*float:left;*/
+    margin:1px;
+    width: 230px;
+    border-bottom: 1px solid #FFFFFF;
+    border-right: 1px solid #FFFFFF;
+    /*border-left: 1px solid #FFFFFF;*/
+    position: relative;
+}
+
+.fav-menu ul li a{
+    color:#996699;
+   
+    font-family:Vivaldi;
+    text-align:center;
+    display:block;
+    width:120px;
+    height:50px;
+    line-height:46px;
+    font-size:25px;
+    margin-left: 22px;
+    text-decoration: none;
+}
+.fav-menu ul li a:hover{
+    background:#ffcccc;
+}
+.fav-menu ul li ul{
+    display:none;
+    width:120px;
+    position:absolute;
+    z-index: 10;
+    left: 100%;
+    top: 0%;
+    background:#ffcccc;
+}
+.fav-menu ul li:hover ul{
+    display:block;
+}
+.fav-menu ul li ul li{
+    width:120px;
+    position: relative;
+    right: 40px;
+}
+.fav-menu ul li ul li a{
+    width:120px;
+    padding-left: 0px;
+    margin-left: 0px;
+}
+.fav-menu ul li ul li a:hover{
+    background:#ff9999;
+}
+
+#main-fav{
+    padding:10px 10px;
+}
+/*#main-fav .container{
+    width:900px;
+    float:left;
+}
+*/#main-fav .product{
+    float:left;
+    padding-left:10px;
+    list-style:none;
+}

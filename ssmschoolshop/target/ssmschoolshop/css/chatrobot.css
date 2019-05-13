@@ -1,0 +1,143 @@
+.clear-float {
+	clear: both;
+}
+
+#input-message {
+	/*font-size: 30px;*/
+}
+
+.chat-div {
+	width: 100%;
+	margin: 0 auto;
+}
+
+.chat {
+	/*margin: 30px;*/
+	width: 100%;
+	display: inline-block;
+	/*margin-top: 0;*/
+	margin-left: 0%;
+	position: relative;
+	/*top: -45px;*/
+}
+
+.chat-content {
+	padding: 20px;
+	background: #F8F8F8;
+	width: 100%;
+	height: 565px;
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+
+.chat-message {
+	margin-top: 8px;
+	margin-bottom: 8px;
+}
+
+.message-icon-left {
+	position: absolute;
+	right: auto;
+	left: -21px;
+	color: #FFF;
+}
+
+.message-icon-right {
+	position: absolute;
+	/*left: 5px;*/
+	right: -280px;
+	color: #DDD;
+}
+
+.info-content {
+	display: inline-block !important;
+	display: inline;
+	width: auto;
+}
+
+.chat-message-content1 {
+	position: relative;
+	float: left;
+	background: #FFFFFF;
+	margin-right: 20%;
+	width: auto;
+	box-shadow: none;
+	padding: 11px;
+	border: 1px solid #DDD;
+	border-radius: 4px;
+}
+
+
+.chat-message-content2 {
+	position: relative;
+	float: right;
+	background: #34BBF9;
+	margin-left: 20%;
+	width: auto;
+	box-shadow: none;
+	padding: 11px;
+	border: 1px solid #34BBF9;
+	border-radius: 4px;
+}
+
+/*.form-group {
+	width: 100%;
+	height: 100%;
+}*/
+
+.form-div {
+	/*padding: 1%;*/
+}
+
+.input-div {
+	width: 86%;
+	margin: 2% 0.8% 2% 0.9%;
+}
+
+.send-div {
+	width: 11%;
+	height: 53px;
+	margin-top: 2%;
+}
+
+#input-message {
+	width: 100%;
+}
+
+.send-div>input {
+	height: 100%;
+}
+
+.chat-list {
+	width: 20%;
+	height: 625px;
+	display: inline-block;
+	overflow-x: hidden;
+	overflow-y: hidden;
+	margin-left: 2%;
+	position: relative;
+	top: 43px;
+	/*background: #EBEBEC;*/
+
+}
+
+.list-item {
+	height: 66px;
+	border-right: 1px solid gray;
+	background: #FAF7F4;
+	padding-top: 4px;
+	padding-left: 45px;
+	/*font-size: 20px;*/
+}
+
+::-webkit-scrollbar {
+    height: 10px;
+    width: 7px;
+    background: rgba(0,0,0,.1);
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(8, 174, 237, 0.3);
+    border-radius: 6px;
+}
+

@@ -1,0 +1,39 @@
+server:
+  port: 8081
+  servlet:
+    context-path: /shop
+    multipart:
+      max-file-size: 10MB  #单个文件
+      max-request-size: 100MB #总文件大小
+
+spring:
+     datasource:
+        driver-class-name: com.mysql.jdbc.Driver
+        url: jdbc:mysql://115.159.219.190:3306/db_shopmaster?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=utf8
+        username: root
+        password: iiotfantas
+     jpa:
+       show-sql: true
+     mvc:
+       view:
+         prefix: /WEB-INF/views/
+         suffix: .jsp
+
+
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.zhang.ssmschoolshop.entity
+   #devtools插件
+devtools:
+    restart:
+      enabled: true #是否支持热部署
+#mybaatis分页插件pagehelper设置
+pagehelper:
+  pagehelperDialect: mysql
+  reasonable: true
+  support-methods-arguments: true
+
+  # 打印sql
+logging:
+    level:
+       com.zhang.ssmschoolshop.dao: DEBUG

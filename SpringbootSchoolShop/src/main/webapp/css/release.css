@@ -1,0 +1,21 @@
+@charset "utf-8";
+/* CSS Document */
+
+.release {
+  margin-left: 10%;
+  width: 80%;
+}
+
+.submit-input {
+  /*width:30%; */
+  /*margin-left:*/
+}
+
+.upload-button {
+  /*width: 30%*/;
+  margin-left: 0;
+}
+
+h1 {
+  /*margin-left:-50px;*/
+}
