@@ -118,7 +118,7 @@
                 } else {
                     //取消收藏
                     $.ajax({
-                        url:"/deleteCollect",
+                        url:"/shop/deleteCollect",
                         type:"POST",
                         data:{
                             goodsid:goodsId
@@ -381,7 +381,7 @@
                                                                             ${comment.commenttime.date}日
                                                                         </time>
                                                                         :
-                                                                        <a  href="${pageContext.request.contextPath}/chat?sendto=${comment.userid}" data-original-title="Add to Wishlist" data-toggle="tooltip" class=" big-font">
+                                                                        <a  href="#" data-original-title="Add to Wishlist" data-toggle="tooltip" class=" big-font">
                                                                             <i class="fa fa-commenting"></i>
                                                                         </a>
                                                                     </p>
