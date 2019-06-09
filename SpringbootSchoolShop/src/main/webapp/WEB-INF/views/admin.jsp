@@ -174,8 +174,9 @@
                 </div>
             </div>
             <footer class="text-right">
-                <p>Copyright &copy; 2084 Company Name
-                    | Designed by <a href="http://www.templatemo.com" target="_parent">templatemo</a></p>
+                <div class="button">版权归长沙理工大学网络工程系张鑫毕设所有</div>
+                <p>Copyright &copy; 2019 Company Name
+                    | Designed by <a href="http://www.templatemo.com" target="_parent">张鑫</a></p>
             </footer>
         </div>
     </div>

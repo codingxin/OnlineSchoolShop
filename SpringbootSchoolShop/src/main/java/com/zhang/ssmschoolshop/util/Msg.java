@@ -3,10 +3,6 @@ package com.zhang.ssmschoolshop.util;
 import java.util.HashMap;
 import java.util.Map;
 
-/**
- * 返回json
- * Created by 文辉 on 2017/7/22.
- */
 public class Msg {
     //100-success,200-fail
     private int code;

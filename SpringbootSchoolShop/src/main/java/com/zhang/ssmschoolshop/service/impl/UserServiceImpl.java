@@ -42,6 +42,5 @@ public class UserServiceImpl implements UserService {
     }
 
 
-   /* @Override
-    public User selectByPrimaryKeyAndPassword(int userId,String password){return userMapper.selectByPrimaryKeyAndPassword();}*/
+
 }

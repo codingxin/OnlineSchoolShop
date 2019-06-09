@@ -224,7 +224,13 @@ public class CustomerController {
         return Msg.success("删除成功");
     }
 
-
+    /**
+     * 收藏商品
+     * @param pn
+     * @param request
+     * @param model
+     * @return
+     */
     @RequestMapping("/info/favorite")
     public String showFavorite(@RequestParam(value = "page", defaultValue = "1") Integer pn, HttpServletRequest request, Model model) {
         HttpSession session = request.getSession();

@@ -134,4 +134,23 @@ public class Goods {
     public void setNewPrice(Float newPrice) {
         this.newPrice = newPrice;
     }
+
+    @Override
+    public String toString() {
+        return "Goods{" +
+                "goodsid=" + goodsid +
+                ", goodsname='" + goodsname + '\'' +
+                ", price=" + price +
+                ", num=" + num +
+                ", uptime=" + uptime +
+                ", category=" + category +
+                ", detailcate='" + detailcate + '\'' +
+                ", activityid=" + activityid +
+                ", description='" + description + '\'' +
+                ", imagePaths=" + imagePaths +
+                ", fav=" + fav +
+                ", activity=" + activity +
+                ", newPrice=" + newPrice +
+                '}';
+    }
 }

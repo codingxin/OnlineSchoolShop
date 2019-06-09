@@ -45,7 +45,9 @@ public class GoodsController {
         PageHelper.startPage(pn, 10);
 
         List<Goods> employees = goodsService.selectByExample(new GoodsExample());
-
+        for(Goods good:employees){
+            System.out.println(good);
+        }
         //显示几个页号
         PageInfo page = new PageInfo(employees, 5);
 
@@ -60,12 +62,7 @@ public class GoodsController {
         if (admin == null) {
             return "redirect:/admin/login";
         }
-        /*//一页显示几个数据
-        PageHelper.startPage(pn, 10);
-        List<Goods> employees = goodsService.selectByExample(new GoodsExample());
-        //显示几个页号
-        PageInfo page = new PageInfo(employees,5);
-        model.addAttribute("pageInfo", page);*/
+
         List<Category> categoryList = cateService.selectByExample(new CategoryExample());
         model.addAttribute("categoryList", categoryList);
 

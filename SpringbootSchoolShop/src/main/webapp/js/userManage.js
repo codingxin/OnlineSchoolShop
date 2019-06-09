@@ -1,6 +1,4 @@
-/**
- * Created by 文辉 on 2017/7/23.
- */
+
 $(document).ready(function () {
 
     var path = $("#path").text();

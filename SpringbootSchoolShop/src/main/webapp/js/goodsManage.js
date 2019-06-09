@@ -1,6 +1,4 @@
-/**
- * Created by 文辉 on 2017/7/22.
- */
+
 var activity = [];
 var currentPage = 1;
 $(document).ready(function () {

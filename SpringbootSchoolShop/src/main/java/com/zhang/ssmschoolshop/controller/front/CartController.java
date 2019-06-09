@@ -34,7 +34,6 @@ public class CartController {
         if(user == null) {
             return "redirect:/login";
         }
-
         //判断是否已经加入购物车
         ShopCart shopCart1 = shopCartService.selectCartByKey(new ShopCartKey(user.getUserid(), shopCart.getGoodsid()));
         if (shopCart1 != null) {
@@ -79,7 +78,6 @@ public class CartController {
         List<Goods> goodsAndImage = new ArrayList<>();
         for (ShopCart cart:shopCart) {
             Goods goods = goodsService.selectById(cart.getGoodsid());
-
             List<ImagePath> imagePathList = goodsService.findImagePath(goods.getGoodsid());
             goods.setImagePaths(imagePathList);
             goods.setNum(cart.getGoodsnum());

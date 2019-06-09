@@ -22,6 +22,29 @@
     <script>
 
     </script>
+    <style type="text/css">
+        .button
+        {
+            clear:both;
+            margin:10px auto;
+            text-align:center;
+            font-size: 20px;
+            padding:10px 0;
+            line-height:25px;
+            color:#666;
+            border-top:#ddd 1px solid;
+        }
+        .button a
+        {
+            margin:0 7px;
+            color:#666;
+        }
+        .button a:hover
+        {
+            color:#000;
+            text-decoration:none;
+        }
+    </style>
 </head>
 <body>
 <div id="main" class="container">
@@ -600,6 +623,7 @@
         </c:if>
     </div>
 </div>
+<div class="button">版权归长沙理工大学网络工程系张鑫毕设所有</div>
 </body>
 </html>
 

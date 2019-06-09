@@ -28,9 +28,7 @@ public class UserController {
     public Msg getAllGoods(@RequestParam(value = "page",defaultValue = "1") Integer pn, HttpServletResponse response, Model model) {
         //一页显示几个数据
         PageHelper.startPage(pn, 10);
-
         List<User> userList = userService.selectByExample(new UserExample());
-
         //显示几个页号
         PageInfo page = new PageInfo(userList,5);
 

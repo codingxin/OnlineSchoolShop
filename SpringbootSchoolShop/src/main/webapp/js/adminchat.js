@@ -1,7 +1,4 @@
-/*
-/!**
- * Created by 文辉 on 2017/7/26.
- *!/
+
 var client;
 var clientID;
 $(window).on('beforeunload',function(){

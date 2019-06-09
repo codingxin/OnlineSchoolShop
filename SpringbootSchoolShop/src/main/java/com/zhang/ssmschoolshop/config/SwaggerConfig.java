@@ -26,8 +26,8 @@ public class SwaggerConfig {
 
     private ApiInfo apiInfo() {
         return new ApiInfoBuilder()
-                .title("纪检监察系统API")
-                .contact(new Contact("zhangxin", "http://www.github.com", "994683607@qq.com"))
+                .title("毕设商城系统API")
+                .contact(new Contact("zhangxin", "http://www.github.com/codingzhangxin", "994683607@qq.com"))
                 .version("1.0")
                 .build();
     }

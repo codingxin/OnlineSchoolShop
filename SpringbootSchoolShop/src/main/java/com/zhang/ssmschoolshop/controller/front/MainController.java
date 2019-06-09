@@ -64,19 +64,15 @@ public class MainController {
         } else {
             userid = user.getUserid();
         }
-
         //数码分类
         List<Goods> digGoods = getCateGoods("数码", userid);
         model.addAttribute("digGoods", digGoods);
-
         //家电
         List<Goods> houseGoods = getCateGoods("家电", userid);
         model.addAttribute("houseGoods", houseGoods);
-
         //服饰
         List<Goods> colGoods = getCateGoods("服饰", userid);
         model.addAttribute("colGoods", colGoods);
-
         //书籍
         List<Goods> bookGoods = getCateGoods("书籍", userid);
         model.addAttribute("bookGoods", bookGoods);

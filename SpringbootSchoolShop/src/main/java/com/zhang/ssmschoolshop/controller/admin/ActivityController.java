@@ -10,6 +10,7 @@ import com.zhang.ssmschoolshop.entity.Goods;
 import com.zhang.ssmschoolshop.service.ActivityService;
 import com.zhang.ssmschoolshop.service.GoodsService;
 import com.zhang.ssmschoolshop.util.Msg;
+import io.swagger.annotations.Api;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -22,6 +23,7 @@ import java.util.List;
 
 @Controller
 @RequestMapping("/admin/activity")
+@Api(value="促销活动controller",tags={"促销活动操作接口"})
 public class ActivityController {
 
     @Autowired(required = false)
