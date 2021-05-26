@@ -1,4 +1,5 @@
 **OnlineSchoolShop-基于Spring boot/SSM商城的搭建教程**
+加微信18229819406，提供定制化修改
 **技术栈**
  * 后端： SpringBoot Swagger Docker（docker需自己搭建docker环境）
  * 前端： JSP 
