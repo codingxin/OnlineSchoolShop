@@ -45,9 +45,7 @@ public class GoodsController {
         PageHelper.startPage(pn, 10);
 
         List<Goods> employees = goodsService.selectByExample(new GoodsExample());
-        for(Goods good:employees){
-            System.out.println(good);
-        }
+
         //显示几个页号
         PageInfo page = new PageInfo(employees, 5);
 

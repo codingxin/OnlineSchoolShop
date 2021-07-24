@@ -4,6 +4,7 @@ package com.zhang.ssmschoolshop.controller.admin;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import com.zhang.ssmschoolshop.entity.*;
+import com.zhang.ssmschoolshop.service.EmailService;
 import com.zhang.ssmschoolshop.service.GoodsService;
 import com.zhang.ssmschoolshop.service.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,6 +26,10 @@ public class AdminOrderController {
 
     @Autowired
     private GoodsService goodsService;
+
+
+    @Autowired
+    private EmailService emailService;
 
     @RequestMapping("/send")
     public String sendOrder(@RequestParam(value = "page",defaultValue = "1")Integer pn, Model model, HttpSession session) {
@@ -90,6 +95,8 @@ public class AdminOrderController {
         order.setOrderid(orderid);
         order.setIssend(true);
         orderService.updateOrderByKey(order);
+        // 发送信息给用户 管理员已经发货了
+        emailService.sendEmailToUser();
         return "redirect:/admin/order/send";
     }
 

@@ -72,6 +72,6 @@
     </form>
 </div>
 
-<div class="button">版权归长沙理工大学网络工程系张鑫毕设所有</div>
+<div class="button">欢迎报考长沙理工大学</div>
 </body>
 </html>

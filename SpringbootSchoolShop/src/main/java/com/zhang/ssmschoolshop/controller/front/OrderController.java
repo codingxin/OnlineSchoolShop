@@ -4,13 +4,18 @@ package com.zhang.ssmschoolshop.controller.front;
 import com.zhang.ssmschoolshop.entity.*;
 import com.zhang.ssmschoolshop.service.*;
 import com.zhang.ssmschoolshop.util.Msg;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.mail.MailException;
+import org.springframework.mail.SimpleMailMessage;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpSession;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -18,6 +23,8 @@ import java.util.List;
 
 @Controller
 public class OrderController {
+
+    private static final Logger log = LoggerFactory.getLogger(OrderController.class);
 
     /*@Value("#{addressService}")*/
     @Autowired
@@ -34,6 +41,9 @@ public class OrderController {
 
     @Autowired
     private ActivityService activityService;
+
+    @Autowired
+    private EmailService emailService;
 
     @RequestMapping("/order")
     public String showOrder(HttpSession session, Model model) {
@@ -112,6 +122,7 @@ public class OrderController {
     @RequestMapping("/orderFinish")
     @ResponseBody
     public Msg orderFinish(Float oldPrice, Float newPrice, Boolean isPay, Integer addressid, HttpSession session) {
+
         User user = (User) session.getAttribute("user");
 
         //获取订单信息
@@ -134,7 +145,8 @@ public class OrderController {
         for (ShopCart cart : shopCart) {
             orderService.insertOrderItem(new OrderItem(null, orderId, cart.getGoodsid(), cart.getGoodsnum()));
         }
-
+        // 购买成功通知管理员
+        emailService.sendEmailToAdmin();
         return Msg.success("购买成功");
     }
 

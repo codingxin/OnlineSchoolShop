@@ -37,3 +37,40 @@ pagehelper:
 logging:
     level:
        com.zhang.ssmschoolshop.dao: DEBUG
+
+
+mail:
+  host: smtp.qq.com
+  username: #your email
+  password: #email 授权码
+  default-encoding: UTF-8
+  protocol: smtp
+  properties:
+    mail:
+      smtp:
+        ssl:
+          enable: true
+  #spring.mail.port: 25
+  from: 1452212105@qq.com
+  receive:  #收件者邮箱
+  test-connection: false
+
+
+
+
+
+# 接口访问  http://127.0.0.1:8081/shop/swagger-ui.html
+# 管理员访问 http://127.0.0.1:8081/shop/admin/login
+
+# admin 12345678
+
+# root  12345678
+# codingzx  12345678
+# admin 12345678
+ # session 和 cookie的区别
+ # 增加超卖逻辑
+#  定时任务 每天查看异常订单
+#  引入死信队列进行处理
+#  图片保存在D；/upload文件夹
+#  线程池
+#  压测工具sb
