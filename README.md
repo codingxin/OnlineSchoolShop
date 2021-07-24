@@ -12,8 +12,14 @@
 >管理员帐号  admin 12345678
 
 >用户帐号  root codingzx  admin  密码均为 12345678
+ 
+ 图片保存路径：  可以全局搜索后替换
+ 
+ windows:  D:/upload
+ 
+ linux:  /usr/upload
      
-  
+
   
 **技术栈**
  * 后端： SpringBoot Swagger Docker（docker需自己搭建docker环境）
