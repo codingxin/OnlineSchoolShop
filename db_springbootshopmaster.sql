@@ -1,16 +1,16 @@
 /*
 Navicat MySQL Data Transfer
 
-Source Server         : 115.159.219.190
-Source Server Version : 50720
-Source Host           : 115.159.219.190:3306
+Source Server         : 127.0.0.1
+Source Server Version : 80019
+Source Host           : localhost:3306
 Source Database       : db_shopmaster
 
 Target Server Type    : MYSQL
-Target Server Version : 50720
+Target Server Version : 80019
 File Encoding         : 65001
 
-Date: 2019-05-13 11:44:21
+Date: 2021-07-24 17:18:18
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -20,14 +20,14 @@ SET FOREIGN_KEY_CHECKS=0;
 -- ----------------------------
 DROP TABLE IF EXISTS `activity`;
 CREATE TABLE `activity` (
-  `activityId` int(12) NOT NULL AUTO_INCREMENT,
+  `activityId` int NOT NULL AUTO_INCREMENT,
   `activityName` varchar(50) NOT NULL,
   `activityDes` varchar(500) NOT NULL,
   `discount` float DEFAULT '1',
-  `fullPrice` int(12) DEFAULT NULL,
-  `reducePrice` int(12) DEFAULT NULL,
-  `fullNum` int(12) DEFAULT NULL,
-  `reduceNum` int(12) DEFAULT NULL,
+  `fullPrice` int DEFAULT NULL,
+  `reducePrice` int DEFAULT NULL,
+  `fullNum` int DEFAULT NULL,
+  `reduceNum` int DEFAULT NULL,
   PRIMARY KEY (`activityId`)
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
@@ -42,8 +42,8 @@ INSERT INTO `activity` VALUES ('2', '开业大酬宾', '开业大酬宾，全场
 -- ----------------------------
 DROP TABLE IF EXISTS `address`;
 CREATE TABLE `address` (
-  `addressID` int(12) NOT NULL AUTO_INCREMENT,
-  `userId` int(12) NOT NULL,
+  `addressID` int NOT NULL AUTO_INCREMENT,
+  `userId` int NOT NULL,
   `province` varchar(50) NOT NULL,
   `city` varchar(50) NOT NULL,
   `county` varchar(50) NOT NULL,
@@ -67,7 +67,7 @@ INSERT INTO `address` VALUES ('8', '3', '湖南省', '长沙市', '雨花区', '
 -- ----------------------------
 DROP TABLE IF EXISTS `admin`;
 CREATE TABLE `admin` (
-  `adminId` int(12) NOT NULL AUTO_INCREMENT,
+  `adminId` int NOT NULL AUTO_INCREMENT,
   `adminName` varchar(50) NOT NULL,
   `password` varchar(50) NOT NULL,
   PRIMARY KEY (`adminId`)
@@ -83,7 +83,7 @@ INSERT INTO `admin` VALUES ('1', 'admin', '25d55ad283aa400af464c76d713c07ad');
 -- ----------------------------
 DROP TABLE IF EXISTS `category`;
 CREATE TABLE `category` (
-  `cateId` int(12) NOT NULL AUTO_INCREMENT,
+  `cateId` int NOT NULL AUTO_INCREMENT,
   `cateName` varchar(50) NOT NULL,
   PRIMARY KEY (`cateId`)
 ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
@@ -102,8 +102,8 @@ INSERT INTO `category` VALUES ('5', '其他');
 -- ----------------------------
 DROP TABLE IF EXISTS `collection`;
 CREATE TABLE `collection` (
-  `userId` int(12) NOT NULL,
-  `goodsId` int(12) NOT NULL,
+  `userId` int NOT NULL,
+  `goodsId` int NOT NULL,
   `collectTime` datetime NOT NULL,
   PRIMARY KEY (`userId`,`goodsId`),
   KEY `collection_ibfk_2` (`goodsId`),
@@ -124,10 +124,10 @@ INSERT INTO `collection` VALUES ('3', '97', '2019-05-13 10:23:11');
 -- ----------------------------
 DROP TABLE IF EXISTS `comment`;
 CREATE TABLE `comment` (
-  `commentId` int(12) NOT NULL AUTO_INCREMENT,
-  `userId` int(12) NOT NULL,
-  `goodsId` int(12) NOT NULL,
-  `point` int(8) NOT NULL,
+  `commentId` int NOT NULL AUTO_INCREMENT,
+  `userId` int NOT NULL,
+  `goodsId` int NOT NULL,
+  `point` int NOT NULL,
   `content` varchar(255) NOT NULL,
   `commentTime` datetime NOT NULL,
   PRIMARY KEY (`commentId`),
@@ -147,9 +147,9 @@ INSERT INTO `comment` VALUES ('2', '3', '93', '4', '商品特别好，我非常�
 -- ----------------------------
 DROP TABLE IF EXISTS `deliver`;
 CREATE TABLE `deliver` (
-  `deliverId` int(12) NOT NULL AUTO_INCREMENT,
-  `orderId` int(12) NOT NULL,
-  `sendId` int(12) NOT NULL,
+  `deliverId` int NOT NULL AUTO_INCREMENT,
+  `orderId` int NOT NULL,
+  `sendId` int NOT NULL,
   PRIMARY KEY (`deliverId`),
   KEY `orderId` (`orderId`),
   CONSTRAINT `deliver_ibfk_1` FOREIGN KEY (`orderId`) REFERENCES `indent` (`orderId`) ON DELETE CASCADE ON UPDATE CASCADE
@@ -164,21 +164,21 @@ CREATE TABLE `deliver` (
 -- ----------------------------
 DROP TABLE IF EXISTS `goods`;
 CREATE TABLE `goods` (
-  `goodsId` int(12) NOT NULL AUTO_INCREMENT,
+  `goodsId` int NOT NULL AUTO_INCREMENT,
   `goodsName` varchar(50) NOT NULL,
-  `price` int(12) NOT NULL,
-  `num` int(12) NOT NULL,
+  `price` int NOT NULL,
+  `num` int NOT NULL,
   `upTime` datetime NOT NULL,
-  `category` int(12) NOT NULL,
+  `category` int NOT NULL,
   `detailCate` varchar(50) NOT NULL,
   `description` text NOT NULL,
-  `activityId` int(12) NOT NULL DEFAULT '1',
+  `activityId` int NOT NULL DEFAULT '1',
   PRIMARY KEY (`goodsId`),
   KEY `activityId` (`activityId`),
   KEY `category` (`category`),
   CONSTRAINT `goods_ibfk_1` FOREIGN KEY (`activityId`) REFERENCES `activity` (`activityId`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `goods_ibfk_2` FOREIGN KEY (`category`) REFERENCES `category` (`cateId`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=98 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=100 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of goods
@@ -188,19 +188,21 @@ INSERT INTO `goods` VALUES ('94', '测试商品2', '23', '34', '2019-05-10 19:44
 INSERT INTO `goods` VALUES ('95', '这是测试商品', '123', '1231', '2019-05-11 11:41:24', '1', '测试', '测试商品', '1');
 INSERT INTO `goods` VALUES ('96', '测试商品4', '213', '222', '2019-05-11 11:42:00', '1', '12321', '这是一个测试商品4', '1');
 INSERT INTO `goods` VALUES ('97', '测试商品5', '213', '212', '2019-05-13 10:22:58', '1', '测试', '这是测试商品', '1');
+INSERT INTO `goods` VALUES ('98', 'test商品1', '10', '100', '2021-07-24 11:50:07', '1', '测试', '测试商品', '1');
+INSERT INTO `goods` VALUES ('99', '1231', '1231', '1231', '2021-07-24 11:51:20', '1', '1231231', '1231', '1');
 
 -- ----------------------------
 -- Table structure for imagepath
 -- ----------------------------
 DROP TABLE IF EXISTS `imagepath`;
 CREATE TABLE `imagepath` (
-  `pathId` int(12) NOT NULL AUTO_INCREMENT,
-  `goodId` int(12) NOT NULL,
+  `pathId` int NOT NULL AUTO_INCREMENT,
+  `goodId` int NOT NULL,
   `path` varchar(255) NOT NULL,
   PRIMARY KEY (`pathId`),
   KEY `goodid` (`goodId`),
   CONSTRAINT `imagepath_ibfk_1` FOREIGN KEY (`goodId`) REFERENCES `goods` (`goodsId`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=129 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=131 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of imagepath
@@ -220,14 +222,16 @@ INSERT INTO `imagepath` VALUES ('125', '97', 'd8f2测试商品5QQ浏览器截图
 INSERT INTO `imagepath` VALUES ('126', '97', '776b测试商品5QQ浏览器截图20181120200038.png');
 INSERT INTO `imagepath` VALUES ('127', '97', '65be测试商品5QQ浏览器截图20181120200039.png');
 INSERT INTO `imagepath` VALUES ('128', '97', 'c2a3测试商品5QQ浏览器截图20190307101645.png');
+INSERT INTO `imagepath` VALUES ('129', '98', 'a0a9test商品1复制算法.png');
+INSERT INTO `imagepath` VALUES ('130', '99', 'false');
 
 -- ----------------------------
 -- Table structure for indent
 -- ----------------------------
 DROP TABLE IF EXISTS `indent`;
 CREATE TABLE `indent` (
-  `orderId` int(12) NOT NULL AUTO_INCREMENT,
-  `userId` int(12) NOT NULL,
+  `orderId` int NOT NULL AUTO_INCREMENT,
+  `userId` int NOT NULL,
   `orderTime` datetime NOT NULL,
   `oldPrice` float NOT NULL,
   `newPrice` float NOT NULL,
@@ -235,14 +239,14 @@ CREATE TABLE `indent` (
   `isSend` tinyint(1) NOT NULL,
   `isReceive` tinyint(1) NOT NULL,
   `isComplete` tinyint(1) NOT NULL,
-  `addressId` int(12) NOT NULL,
+  `addressId` int NOT NULL,
   PRIMARY KEY (`orderId`),
   KEY `userId` (`userId`),
   KEY `orderGoods` (`orderTime`),
   KEY `addressId` (`addressId`),
   CONSTRAINT `indent_ibfk_1` FOREIGN KEY (`userId`) REFERENCES `user` (`userId`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `indent_ibfk_2` FOREIGN KEY (`addressId`) REFERENCES `address` (`addressID`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=34 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=35 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of indent
@@ -253,22 +257,23 @@ INSERT INTO `indent` VALUES ('30', '3', '2019-05-13 10:16:19', '109', '109', '1'
 INSERT INTO `indent` VALUES ('31', '3', '2019-05-13 10:37:59', '10', '10', '0', '1', '1', '1', '8');
 INSERT INTO `indent` VALUES ('32', '3', '2019-05-13 10:43:05', '10', '10', '1', '1', '0', '0', '8');
 INSERT INTO `indent` VALUES ('33', '3', '2019-05-13 10:47:42', '40', '40', '1', '1', '1', '1', '8');
+INSERT INTO `indent` VALUES ('34', '3', '2021-07-24 12:02:01', '40', '40', '1', '1', '0', '0', '8');
 
 -- ----------------------------
 -- Table structure for orderitem
 -- ----------------------------
 DROP TABLE IF EXISTS `orderitem`;
 CREATE TABLE `orderitem` (
-  `itemId` int(12) NOT NULL AUTO_INCREMENT,
-  `orderId` int(12) NOT NULL,
-  `goodsId` int(12) NOT NULL,
-  `num` int(12) NOT NULL,
+  `itemId` int NOT NULL AUTO_INCREMENT,
+  `orderId` int NOT NULL,
+  `goodsId` int NOT NULL,
+  `num` int NOT NULL,
   PRIMARY KEY (`itemId`),
   KEY `orderId` (`orderId`),
   KEY `goodsId` (`goodsId`),
   CONSTRAINT `orderitem_ibfk_1` FOREIGN KEY (`orderId`) REFERENCES `indent` (`orderId`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `orderitem_ibfk_2` FOREIGN KEY (`goodsId`) REFERENCES `goods` (`goodsId`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=22 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=23 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of orderitem
@@ -281,16 +286,17 @@ INSERT INTO `orderitem` VALUES ('18', '30', '94', '3');
 INSERT INTO `orderitem` VALUES ('19', '31', '93', '1');
 INSERT INTO `orderitem` VALUES ('20', '32', '93', '1');
 INSERT INTO `orderitem` VALUES ('21', '33', '93', '4');
+INSERT INTO `orderitem` VALUES ('22', '34', '98', '4');
 
 -- ----------------------------
 -- Table structure for shopcart
 -- ----------------------------
 DROP TABLE IF EXISTS `shopcart`;
 CREATE TABLE `shopcart` (
-  `userId` int(12) NOT NULL,
-  `goodsid` int(12) NOT NULL,
+  `userId` int NOT NULL,
+  `goodsid` int NOT NULL,
   `cateDate` datetime NOT NULL,
-  `goodsNum` int(12) NOT NULL,
+  `goodsNum` int NOT NULL,
   PRIMARY KEY (`userId`,`goodsid`),
   KEY `userId` (`userId`),
   KEY `goodsid` (`goodsid`),
@@ -307,7 +313,7 @@ CREATE TABLE `shopcart` (
 -- ----------------------------
 DROP TABLE IF EXISTS `user`;
 CREATE TABLE `user` (
-  `userId` int(12) NOT NULL AUTO_INCREMENT,
+  `userId` int NOT NULL AUTO_INCREMENT,
   `username` varchar(50) NOT NULL,
   `password` varchar(50) NOT NULL,
   `regTime` datetime NOT NULL,
@@ -320,6 +326,7 @@ CREATE TABLE `user` (
 -- ----------------------------
 -- Records of user
 -- ----------------------------
-INSERT INTO `user` VALUES ('1', 'root', '12345678', '2019-04-18 17:16:34', '916877983@qq.com', '18229819406');
-INSERT INTO `user` VALUES ('2', 'zhangxin', '19402600297a305197962a5633e7711e', '2019-04-22 15:29:12', '994683607@qq.com', '18229819406');
+INSERT INTO `user` VALUES ('1', 'root', '25d55ad283aa400af464c76d713c07ad', '2019-04-18 17:16:34', '916877983@qq.com', '18229819406');
+INSERT INTO `user` VALUES ('2', 'codingzx', '25d55ad283aa400af464c76d713c07ad', '2019-04-22 15:29:12', '994683607@qq.com', '18229819406');
 INSERT INTO `user` VALUES ('3', 'admin', '25d55ad283aa400af464c76d713c07ad', '2019-05-16 10:46:46', '123123', '1231321');
+SET FOREIGN_KEY_CHECKS=1;
