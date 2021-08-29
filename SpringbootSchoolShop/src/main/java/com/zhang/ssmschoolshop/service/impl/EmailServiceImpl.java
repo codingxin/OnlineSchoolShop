@@ -16,7 +16,7 @@ import java.time.LocalDate;
 
 /**
  * @author codingzx
- * @description   发送邮件的服务
+ * @description 发送邮件的服务
  * @link sendEmailToAdmin  用户下单后 发送邮件给管理员
  * @link sendEmailToUser   管理员发送后通知用户
  * @date 2021/7/24 12:59
@@ -26,18 +26,24 @@ public class EmailServiceImpl implements EmailService {
 
     private static final Logger log = LoggerFactory.getLogger(EmailServiceImpl.class);
 
-    @Value("${spring.mail.username}")
+    @Value("${mail.username}")
     private String sender;
 
-    @Value("${spring.mail.receive}")
+    @Value("${mail.receive}")
     private String receiver;
 
-    @Value("${spring.mail.receive2}")
+    @Value("${mail.receive2}")
     private String twoDog;
 
-    @Autowired
-    MailSender mailSender;
 
+    static MailSender mailSender;
+
+    public EmailServiceImpl() {
+    }
+
+    public EmailServiceImpl(MailSender mailSender) {
+        this.mailSender = mailSender;
+    }
 
     @Override
     public void sendEmailToAdmin() {

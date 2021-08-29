@@ -54,7 +54,9 @@
 
 10. 死信队列处理延迟任务
 
-11.
+11. html导出pdf  -  wkhtmltopdf插件
+
+12. 
 
 
 
@@ -77,3 +79,13 @@
  ![在这里插入图片描述](https://img-blog.csdnimg.cn/20200521172710683.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM1MTgwOTcz,size_16,color_FFFFFF,t_70)
  ![在这里插入图片描述](https://img-blog.csdnimg.cn/20200521172724371.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM1MTgwOTcz,size_16,color_FFFFFF,t_70)
  ![在这里插入图片描述](https://img-blog.csdnimg.cn/20200521172738766.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM1MTgwOTcz,size_16,color_FFFFFF,t_70)
+
+
+# 图片不能显示
+
+ 原因：初始图片没有存储，可以在后台添加一个商品，查看图片存储路径:
+ 
+ windows:D:/upload
+ 
+ Linux:/usr/upload
+ 

@@ -41,8 +41,8 @@ logging:
 
 mail:
   host: smtp.qq.com
-  username: #your email
-  password: #email 授权码
+  username: 1452212104@qq.com
+  password: ngwtfshywjpajihi1  ### 你的邮件smtp授权码
   default-encoding: UTF-8
   protocol: smtp
   properties:
@@ -52,7 +52,8 @@ mail:
           enable: true
   #spring.mail.port: 25
   from: 1452212105@qq.com
-  receive:  #收件者邮箱
+  receive:  1452212101@qq.com #收件者邮箱
+  receive2: 1452212102@qq.com
   test-connection: false
 
 
