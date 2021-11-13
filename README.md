@@ -90,3 +90,6 @@
  
  Linux:/usr/upload
  
+# 其他 
+ 
+ 有好的开发分支欢迎提交Pr
