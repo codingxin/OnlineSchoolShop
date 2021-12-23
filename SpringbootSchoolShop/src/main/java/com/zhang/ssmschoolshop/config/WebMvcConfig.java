@@ -26,7 +26,8 @@ public class WebMvcConfig implements WebMvcConfigurer {
         String os = System.getProperty("os.name");
         String pathPatterns="/pictures/**";
         String pathAbsolute="file:D:/upload/";
-        if (os.toLowerCase().startsWith("linux")){
+        if (!os.toLowerCase().startsWith("windows")){
+            // todo mac需要修改地址
             pathAbsolute="file:/usr/upload/";
         }
         registry.addResourceHandler(pathPatterns).addResourceLocations(pathAbsolute);

@@ -22,7 +22,7 @@ public class ImageUtil {
         int size = (int) file.getSize();
         String path = "D:/upload";
         String os = System.getProperty("os.name");
-        if(os.toLowerCase().startsWith("linux")){
+        if(os.toLowerCase().startsWith("windows")){
             path="/usr/upload";
         }
         String fileName=UUID.randomUUID().toString().substring(0,4)+shopName;
