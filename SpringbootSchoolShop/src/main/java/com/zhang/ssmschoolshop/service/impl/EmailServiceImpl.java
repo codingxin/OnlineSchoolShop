@@ -1,6 +1,6 @@
 package com.zhang.ssmschoolshop.service.impl;
 
-import com.zhang.ssmschoolshop.controller.front.OrderController;
+
 import com.zhang.ssmschoolshop.entity.EmailSend;
 import com.zhang.ssmschoolshop.service.EmailService;
 import org.slf4j.Logger;
@@ -10,6 +10,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.mail.MailException;
 import org.springframework.mail.MailSender;
 import org.springframework.mail.SimpleMailMessage;
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
@@ -22,6 +23,7 @@ import java.time.LocalDate;
  * @date 2021/7/24 12:59
  */
 @Service("emailService")
+@Component
 public class EmailServiceImpl implements EmailService {
 
     private static final Logger log = LoggerFactory.getLogger(EmailServiceImpl.class);
@@ -35,8 +37,8 @@ public class EmailServiceImpl implements EmailService {
     @Value("${mail.receive2}")
     private String twoDog;
 
-
-    static MailSender mailSender;
+    @Autowired
+    MailSender mailSender;
 
     public EmailServiceImpl() {
     }

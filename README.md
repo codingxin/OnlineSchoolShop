@@ -21,7 +21,9 @@
  linux:  /usr/upload
      
  mac：需要修改代码，见下面已知问题记录. 或者代码全局搜索   // todo mac需要修改地址 
+   
   
+ 
 **技术栈**
  * 后端： SpringBoot Swagger Docker（docker需自己搭建docker环境）
  * 前端： JSP 
@@ -98,7 +100,16 @@
 
 1.  项目适配mac有些问题需要修改，默认创建图片文件夹，mac会提示没有权限创建.
 
+
+
 > 对应解决方案： 修改tomcat的虚拟映射目录 ； 修改图片入库
   
-  1."WebMvcConfig"类修改Mac对应的图片存储目录，如把D盘改为Mac对应用户的文件夹 /users/codingzx/upload （codingzx为你自己的mac用户名）
-  2. 修改图片入库路径
+ - "WebMvcConfig"类修改Mac对应的图片存储目录，如把D盘改为Mac对应用户的文件夹 /users/codingzx/upload （codingzx为你自己的mac用户名）
+   
+ - 修改图片入库路径
+  
+ 2.  sendEmailToAdmin   和  sendEmailToUser 方法实现有点问题  待更新
+ 
+ 
+ 更新日志：
+ 
