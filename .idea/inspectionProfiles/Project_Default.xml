@@ -1,0 +1,12 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="Duplicates" enabled="true" level="WEAK WARNING" enabled_by_default="true">
+      <Java>
+        <minSize>58</minSize>
+        <isEnabled>true</isEnabled>
+      </Java>
+    </inspection_tool>
+    <inspection_tool class="SpringJavaInjectionPointsAutowiringInspection" enabled="false" level="ERROR" enabled_by_default="false" />
+  </profile>
+</component>

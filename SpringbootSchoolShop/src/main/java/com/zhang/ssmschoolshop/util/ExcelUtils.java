@@ -27,7 +27,7 @@ import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.text.SimpleDateFormat;
-import java.time.LocalDate;
+
 import java.util.*;
 
 /**
@@ -112,15 +112,15 @@ public class ExcelUtils {
             //创建单元格，并设置值表头 设置表头居中
             HSSFCellStyle style = wb.createCellStyle();
             //设置边框
-            style.setBorderBottom(HSSFCellStyle.BORDER_THIN); //下边框
-            style.setBorderLeft(HSSFCellStyle.BORDER_THIN);//左边框
-            style.setBorderTop(HSSFCellStyle.BORDER_THIN);//上边框
-            style.setBorderRight(HSSFCellStyle.BORDER_THIN);//右边框
+//            style.setBorderBottom(HSSFCellStyle.BORDER_THIN); //下边框
+//            style.setBorderLeft(HSSFCellStyle.BORDER_THIN);//左边框
+//            style.setBorderTop(HSSFCellStyle.BORDER_THIN);//上边框
+//            style.setBorderRight(HSSFCellStyle.BORDER_THIN);//右边框
             //自动换行
             //style.setWrapText(true);
             //创建一个居中格式
-            style.setAlignment(HSSFCellStyle.ALIGN_CENTER);
-            style.setVerticalAlignment(HSSFCellStyle.VERTICAL_CENTER);//上下居中
+//            style.setAlignment(HSSFCellStyle.ALIGN_CENTER);
+//            style.setVerticalAlignment(HSSFCellStyle.VERTICAL_CENTER);//上下居中
             //设置字体
             HSSFFont font = wb.createFont();
             font.setFontName("宋体");
