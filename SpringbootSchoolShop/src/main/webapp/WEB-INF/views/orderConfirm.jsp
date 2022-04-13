@@ -48,7 +48,7 @@
                     <label>
                         <input type="radio" name="addressid" class="address-check" value="${addItem.addressid}"
                                checked>
-                            ${addItem.province} ${addItem.city} ${addItem.county}  ${addItem.detailaddr}（${addItem.conname}收）${addItem.contel}
+                            ${addItem.province} ${addItem.city} ${addItem.county}  ${addItem.detailaddr}（${addItem.conname}）${addItem.contel}
                     </label>
                 </div>
             </c:forEach>

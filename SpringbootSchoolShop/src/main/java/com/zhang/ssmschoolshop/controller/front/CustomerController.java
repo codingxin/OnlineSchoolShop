@@ -13,6 +13,7 @@ import com.zhang.ssmschoolshop.util.Msg;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -291,7 +292,9 @@ public class CustomerController {
 
     @RequestMapping("/finishList")
     @ResponseBody
-    public Msg finishiList(Integer orderid) {
+    public Msg finishiList(Integer orderid,String specialmask) {
+        System.out.println(specialmask);
+        if (StringUtils.isEmpty(specialmask)) return Msg.fail("验证码错误");
         Order order = orderService.selectByPrimaryKey(orderid);
         order.setIsreceive(true);
         order.setIscomplete(true);

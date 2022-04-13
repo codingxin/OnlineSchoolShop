@@ -356,6 +356,7 @@
                                     </c:forEach>
                                 </div>
                                 <div class="mdl-card__actions mdl-card--border">
+                                    <input class="mdl-textfield__input" type="text" id="specialmask" value="请输入提货验证码">
                                     <button class="templatemo-blue-button " name="finishList"><h5>完成订单</h5></button>
                                 </div>
                             </div>

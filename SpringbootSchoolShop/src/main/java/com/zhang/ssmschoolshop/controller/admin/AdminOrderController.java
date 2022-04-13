@@ -96,7 +96,7 @@ public class AdminOrderController {
         order.setIssend(true);
         orderService.updateOrderByKey(order);
         // 发送信息给用户 管理员已经发货了
-        emailService.sendEmailToUser();
+//        emailService.sendEmailToUser();
         return "redirect:/admin/order/send";
     }
 

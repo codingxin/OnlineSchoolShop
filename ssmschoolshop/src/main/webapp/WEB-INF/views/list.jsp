@@ -356,6 +356,10 @@
                                     </c:forEach>
                                 </div>
                                 <div class="mdl-card__actions mdl-card--border">
+                                    <div class="mdl-textfield__expandable-holder">
+                                        <input class="mdl-textfield__input" type="text" id="search">
+                                        <label class="mdl-textfield__label" for="search">Enter your query...</label>
+                                    </div>
                                     <button class="templatemo-blue-button " name="finishList"><h5>完成订单</h5></button>
                                 </div>
                             </div>

@@ -23,8 +23,10 @@ $(document).ready(function (){
 
     $("[name='finishList']").click(function (){
         var orderid=$(this).parents("[name='parent']").find("[name='orderid']").text();
+        var specialmask=document.getElementById('specialmask').value;
         var order={};
         order.orderid=orderid;
+        order.specialmask = specialmask;
         $.ajax({
             type:"POST",
             url:"/shop/finishList",
