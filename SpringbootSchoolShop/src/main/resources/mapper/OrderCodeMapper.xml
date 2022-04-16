@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zhang.ssmschoolshop.dao.OrderCodeMapper">
+    <resultMap id="BaseResultMap" type="com.zhang.ssmschoolshop.entity.OrderCode">
+        <id column="orderId" jdbcType="INTEGER" property="orderId"/>
+        <result column="code" jdbcType="VARCHAR" property="code"/>
+    </resultMap>
+
+    <select id="findByCodeId" parameterType="int" resultMap="BaseResultMap">
+        select *
+        from ordercode
+        where orderId = #{orderId}
+    </select>
+
+    <insert id="insertOrderCode" parameterType="com.zhang.ssmschoolshop.entity.OrderCode">
+        insert into ordercode (orderId, code)
+        values (#{orderId}, #{code})
+    </insert>
+
+    <!--修改语句-->
+    <update id="updateByPrimaryKey" parameterType="com.zhang.ssmschoolshop.entity.OrderCode">
+        update ordercode
+        set orderId = #{orderId},
+            code    = #{code}
+    </update>
+
+    <!--删除语句-->
+    <delete id="deleteByCodeId" parameterType="int">
+        delete
+        from ordercode
+        where orderId = #{orderId}
+    </delete>
+
+    <select id="findAllOrderCode" resultType="com.zhang.ssmschoolshop.entity.OrderCode">
+        select *
+        from ordercode
+    </select>
+
+
+</mapper>

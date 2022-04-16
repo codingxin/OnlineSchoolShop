@@ -3,9 +3,11 @@ package com.zhang.ssmschoolshop.controller.admin;
 
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
+import com.sun.org.apache.xpath.internal.operations.Or;
 import com.zhang.ssmschoolshop.entity.*;
 import com.zhang.ssmschoolshop.service.EmailService;
 import com.zhang.ssmschoolshop.service.GoodsService;
+import com.zhang.ssmschoolshop.service.OrderCodeService;
 import com.zhang.ssmschoolshop.service.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -17,6 +19,8 @@ import javax.servlet.http.HttpSession;
 import java.util.ArrayList;
 import java.util.List;
 
+import static com.zhang.ssmschoolshop.util.verificate.Verificate.getRandowVericate;
+
 @Controller
 @RequestMapping("/admin/order")
 public class AdminOrderController {
@@ -27,12 +31,13 @@ public class AdminOrderController {
     @Autowired
     private GoodsService goodsService;
 
-
+    @Autowired
+    private OrderCodeService orderCodeService;
     @Autowired
     private EmailService emailService;
 
     @RequestMapping("/send")
-    public String sendOrder(@RequestParam(value = "page",defaultValue = "1")Integer pn, Model model, HttpSession session) {
+    public String sendOrder(@RequestParam(value = "page", defaultValue = "1") Integer pn, Model model, HttpSession session) {
 
         Admin admin = (Admin) session.getAttribute("admin");
         if (admin == null) {
@@ -79,7 +84,7 @@ public class AdminOrderController {
         }
 
         //显示几个页号
-        PageInfo page = new PageInfo(orderList,5);
+        PageInfo page = new PageInfo(orderList, 5);
         model.addAttribute("pageInfo", page);
 
         return "adminAllOrder";
@@ -95,13 +100,20 @@ public class AdminOrderController {
         order.setOrderid(orderid);
         order.setIssend(true);
         orderService.updateOrderByKey(order);
+
+        // 生成验证码
+        OrderCode orderCode =new OrderCode();
+        orderCode.setCode(getRandowVericate());
+        orderCode.setOrderId(orderid);
+        orderCodeService.insertOrderCode(orderCode);
+
         // 发送信息给用户 管理员已经发货了
 //        emailService.sendEmailToUser();
         return "redirect:/admin/order/send";
     }
 
     @RequestMapping("/receiver")
-    public String receiveOrder(@RequestParam(value = "page",defaultValue = "1")Integer pn, Model model, HttpSession session) {
+    public String receiveOrder(@RequestParam(value = "page", defaultValue = "1") Integer pn, Model model, HttpSession session) {
         Admin admin = (Admin) session.getAttribute("admin");
         if (admin == null) {
             return "redirect:/admin/login";
@@ -148,7 +160,7 @@ public class AdminOrderController {
         }
 
         //显示几个页号
-        PageInfo page = new PageInfo(orderList,5);
+        PageInfo page = new PageInfo(orderList, 5);
         model.addAttribute("pageInfo", page);
 
         return "adminOrderReceive";

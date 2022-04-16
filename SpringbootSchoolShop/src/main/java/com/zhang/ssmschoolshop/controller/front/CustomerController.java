@@ -4,10 +4,7 @@ package com.zhang.ssmschoolshop.controller.front;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import com.zhang.ssmschoolshop.entity.*;
-import com.zhang.ssmschoolshop.service.AddressService;
-import com.zhang.ssmschoolshop.service.GoodsService;
-import com.zhang.ssmschoolshop.service.OrderService;
-import com.zhang.ssmschoolshop.service.UserService;
+import com.zhang.ssmschoolshop.service.*;
 import com.zhang.ssmschoolshop.util.Md5Util;
 import com.zhang.ssmschoolshop.util.Msg;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -34,6 +31,11 @@ public class CustomerController {
 
     @Autowired
     private UserService userService;
+
+
+    @Autowired
+    private OrderCodeService orderCodeService;
+
 
     @RequestMapping("/register")
     public String register() {
@@ -227,6 +229,7 @@ public class CustomerController {
 
     /**
      * 收藏商品
+     *
      * @param pn
      * @param request
      * @param model
@@ -292,9 +295,13 @@ public class CustomerController {
 
     @RequestMapping("/finishList")
     @ResponseBody
-    public Msg finishiList(Integer orderid,String specialmask) {
+    public Msg finishiList(Integer orderid, String specialmask) {
         System.out.println(specialmask);
         if (StringUtils.isEmpty(specialmask)) return Msg.fail("验证码错误");
+        OrderCode orderCode = orderCodeService.selectByPrimaryKey(orderid);
+        if (!specialmask.equals(orderCode.getCode())) {
+            return Msg.fail("验证码错误,提货失败");
+        }
         Order order = orderService.selectByPrimaryKey(orderid);
         order.setIsreceive(true);
         order.setIscomplete(true);

@@ -2,19 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b183929f-2082-485b-85c9-f94d406b2a7f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_collections4_4_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SpringbootSchoolShop/src/main/resources/rebel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_poi_poi_3_14.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_poi_poi_3_17.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SpringbootSchoolShop/src/main/java/com/zhang/ssmschoolshop/dao/OrderCodeMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SpringbootSchoolShop/src/main/java/com/zhang/ssmschoolshop/entity/OrderCode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SpringbootSchoolShop/src/main/java/com/zhang/ssmschoolshop/service/OrderCodeService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SpringbootSchoolShop/src/main/java/com/zhang/ssmschoolshop/service/impl/OrderCodeServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SpringbootSchoolShop/src/main/resources/mapper/OrderCodeMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SpringbootSchoolShop/src/main/webapp/WEB-INF/views/orderCodeManage.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SpringbootSchoolShop/src/main/webapp/js/orderManage.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SpringbootSchoolShop/src/test/java/com/zhang/ssmschoolshop/OrderCodeTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SpringbootSchoolShop/src/main/java/com/zhang/ssmschoolshop/controller/admin/AdminOrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/SpringbootSchoolShop/src/main/java/com/zhang/ssmschoolshop/controller/admin/AdminOrderController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SpringbootSchoolShop/src/main/java/com/zhang/ssmschoolshop/controller/admin/ExcelController.java" beforeDir="false" afterPath="$PROJECT_DIR$/SpringbootSchoolShop/src/main/java/com/zhang/ssmschoolshop/controller/admin/ExcelController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpringbootSchoolShop/src/main/java/com/zhang/ssmschoolshop/controller/admin/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/SpringbootSchoolShop/src/main/java/com/zhang/ssmschoolshop/controller/admin/UserController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SpringbootSchoolShop/src/main/java/com/zhang/ssmschoolshop/controller/front/CustomerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/SpringbootSchoolShop/src/main/java/com/zhang/ssmschoolshop/controller/front/CustomerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SpringbootSchoolShop/src/main/java/com/zhang/ssmschoolshop/controller/front/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/SpringbootSchoolShop/src/main/java/com/zhang/ssmschoolshop/controller/front/OrderController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SpringbootSchoolShop/src/main/java/com/zhang/ssmschoolshop/util/ExcelUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/SpringbootSchoolShop/src/main/java/com/zhang/ssmschoolshop/util/ExcelUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SpringbootSchoolShop/src/main/webapp/WEB-INF/views/list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/SpringbootSchoolShop/src/main/webapp/WEB-INF/views/list.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SpringbootSchoolShop/src/main/webapp/WEB-INF/views/orderConfirm.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/SpringbootSchoolShop/src/main/webapp/WEB-INF/views/orderConfirm.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SpringbootSchoolShop/src/main/webapp/js/list.js" beforeDir="false" afterPath="$PROJECT_DIR$/SpringbootSchoolShop/src/main/webapp/js/list.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ssmschoolshop/src/main/webapp/WEB-INF/views/list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/ssmschoolshop/src/main/webapp/WEB-INF/views/list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpringbootSchoolShop/src/main/java/com/zhang/ssmschoolshop/util/verificate/Verificate.java" beforeDir="false" afterPath="$PROJECT_DIR$/SpringbootSchoolShop/src/main/java/com/zhang/ssmschoolshop/util/verificate/Verificate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpringbootSchoolShop/src/main/webapp/WEB-INF/views/sidebar.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/SpringbootSchoolShop/src/main/webapp/WEB-INF/views/sidebar.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ssmschoolshop/src/main/webapp/WEB-INF/views/sidebar.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/ssmschoolshop/src/main/webapp/WEB-INF/views/sidebar.jsp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/SpringbootSchoolShop/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -41,47 +44,72 @@
     <option name="isMigrated" value="true" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/SpringbootSchoolShop/src/main/webapp/WEB-INF/views/list.jsp">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SpringbootSchoolShop/src/main/webapp/WEB-INF/views/orderCodeManage.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="107">
-              <caret line="358" column="113" selection-start-line="358" selection-start-column="113" selection-end-line="358" selection-end-column="113" />
+            <state relative-caret-position="2550">
+              <caret line="143" column="56" lean-forward="true" selection-start-line="143" selection-start-column="56" selection-end-line="143" selection-end-column="56" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SpringbootSchoolShop/src/main/webapp/WEB-INF/views/sidebar.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="293">
+              <caret line="21" column="79" selection-start-line="21" selection-start-column="71" selection-end-line="21" selection-end-column="79" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SpringbootSchoolShop/src/main/webapp/js/orderManage.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="96">
+              <caret line="48" column="43" lean-forward="true" selection-start-line="48" selection-start-column="43" selection-end-line="48" selection-end-column="43" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/SpringbootSchoolShop/src/main/java/com/zhang/ssmschoolshop/controller/admin/UserController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="125">
+              <caret line="54" column="37" selection-start-line="54" selection-start-column="37" selection-end-line="54" selection-end-column="37" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SpringbootSchoolShop/src/main/java/com/zhang/ssmschoolshop/entity/OrderCode.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="266">
+              <caret line="14" column="23" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="23" />
               <folding>
-                <element signature="n#c:forEach#0;n#jsp:root#0;n#!!top" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SpringbootSchoolShop/src/main/webapp/js/list.js">
+        <entry file="file://$PROJECT_DIR$/SpringbootSchoolShop/src/main/resources/mapper/OrderCodeMapper.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="133">
-              <caret line="25" column="69" lean-forward="true" selection-start-line="25" selection-start-column="69" selection-end-line="25" selection-end-column="69" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SpringbootSchoolShop/src/main/java/com/zhang/ssmschoolshop/controller/front/CustomerController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="207">
-              <caret line="301" selection-start-line="301" selection-end-line="301" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.1.6.RELEASE/spring-web-5.1.6.RELEASE.jar!/org/springframework/web/method/support/InvocableHandlerMethod.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="132">
-              <caret line="101" selection-start-line="101" selection-end-line="101" />
+            <state relative-caret-position="21">
+              <caret line="23" column="12" selection-start-line="23" selection-start-column="12" selection-end-line="23" selection-end-column="12" />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -97,6 +125,18 @@
       <find>&lt;input</find>
       <find>templatemo-blue-button</find>
       <find>&lt;h5&gt;完成订单&lt;/h5&gt;</find>
+      <find>BaseResultMap</find>
+      <find>验证码</find>
+      <find>finish</find>
+      <find>Sendgoods</find>
+      <find>finishL</find>
+      <find>finis</find>
+      <find>用户管理</find>
+      <find>orderCodeController</find>
+      <find>orderCodeService</find>
+      <find>/showjson</find>
+      <find>js</find>
+      <find>.js</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -118,12 +158,25 @@
         <option value="$PROJECT_DIR$/SpringbootSchoolShop/src/main/java/com/zhang/ssmschoolshop/util/ExcelUtils.java" />
         <option value="$PROJECT_DIR$/SpringbootSchoolShop/src/main/java/com/zhang/ssmschoolshop/service/impl/EmailServiceImpl.java" />
         <option value="$PROJECT_DIR$/SpringbootSchoolShop/src/main/java/com/zhang/ssmschoolshop/controller/front/OrderController.java" />
-        <option value="$PROJECT_DIR$/SpringbootSchoolShop/src/main/java/com/zhang/ssmschoolshop/controller/admin/AdminOrderController.java" />
         <option value="$PROJECT_DIR$/SpringbootSchoolShop/src/main/webapp/WEB-INF/views/orderConfirm.jsp" />
         <option value="$PROJECT_DIR$/ssmschoolshop/src/main/webapp/WEB-INF/views/list.jsp" />
-        <option value="$PROJECT_DIR$/SpringbootSchoolShop/src/main/java/com/zhang/ssmschoolshop/controller/front/CustomerController.java" />
         <option value="$PROJECT_DIR$/SpringbootSchoolShop/src/main/webapp/js/list.js" />
         <option value="$PROJECT_DIR$/SpringbootSchoolShop/src/main/webapp/WEB-INF/views/list.jsp" />
+        <option value="$PROJECT_DIR$/SpringbootSchoolShop/src/test/java/com/zhang/ssmschoolshop/SpringbootSchoolShopApplicationApplicationTests.java" />
+        <option value="$PROJECT_DIR$/SpringbootSchoolShop/src/main/java/com/zhang/ssmschoolshop/entity/OrderCode.java" />
+        <option value="$PROJECT_DIR$/SpringbootSchoolShop/src/main/java/com/zhang/ssmschoolshop/util/verificate/Verificate.java" />
+        <option value="$PROJECT_DIR$/SpringbootSchoolShop/src/main/java/com/zhang/ssmschoolshop/controller/admin/AdminOrderController.java" />
+        <option value="$PROJECT_DIR$/SpringbootSchoolShop/src/main/java/com/zhang/ssmschoolshop/controller/front/CustomerController.java" />
+        <option value="$PROJECT_DIR$/ssmschoolshop/src/main/webapp/WEB-INF/views/sidebar.jsp" />
+        <option value="$PROJECT_DIR$/SpringbootSchoolShop/src/main/webapp/WEB-INF/views/sidebar.jsp" />
+        <option value="$PROJECT_DIR$/SpringbootSchoolShop/src/main/java/com/zhang/ssmschoolshop/controller/admin/OrderCodeController.java" />
+        <option value="$PROJECT_DIR$/SpringbootSchoolShop/src/main/java/com/zhang/ssmschoolshop/service/OrderCodeService.java" />
+        <option value="$PROJECT_DIR$/SpringbootSchoolShop/src/main/java/com/zhang/ssmschoolshop/service/impl/OrderCodeServiceImpl.java" />
+        <option value="$PROJECT_DIR$/SpringbootSchoolShop/src/main/java/com/zhang/ssmschoolshop/dao/OrderCodeMapper.java" />
+        <option value="$PROJECT_DIR$/SpringbootSchoolShop/src/main/resources/mapper/OrderCodeMapper.xml" />
+        <option value="$PROJECT_DIR$/SpringbootSchoolShop/src/main/java/com/zhang/ssmschoolshop/controller/admin/UserController.java" />
+        <option value="$PROJECT_DIR$/SpringbootSchoolShop/src/main/webapp/WEB-INF/views/orderCodeManage.jsp" />
+        <option value="$PROJECT_DIR$/SpringbootSchoolShop/src/main/webapp/js/orderManage.js" />
       </list>
     </option>
   </component>
@@ -192,13 +245,256 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="OnlineSchoolShop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="OnlineSchoolShop" type="462c0819:PsiDirectoryNode" />
+              <item name="SpringbootSchoolShop" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="OnlineSchoolShop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="OnlineSchoolShop" type="462c0819:PsiDirectoryNode" />
+              <item name="SpringbootSchoolShop" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="OnlineSchoolShop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="OnlineSchoolShop" type="462c0819:PsiDirectoryNode" />
+              <item name="SpringbootSchoolShop" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="zhang" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="OnlineSchoolShop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="OnlineSchoolShop" type="462c0819:PsiDirectoryNode" />
+              <item name="SpringbootSchoolShop" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="zhang" type="462c0819:PsiDirectoryNode" />
+              <item name="ssmschoolshop" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="OnlineSchoolShop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="OnlineSchoolShop" type="462c0819:PsiDirectoryNode" />
+              <item name="SpringbootSchoolShop" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="zhang" type="462c0819:PsiDirectoryNode" />
+              <item name="ssmschoolshop" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="OnlineSchoolShop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="OnlineSchoolShop" type="462c0819:PsiDirectoryNode" />
+              <item name="SpringbootSchoolShop" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="zhang" type="462c0819:PsiDirectoryNode" />
+              <item name="ssmschoolshop" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="OnlineSchoolShop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="OnlineSchoolShop" type="462c0819:PsiDirectoryNode" />
+              <item name="SpringbootSchoolShop" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="zhang" type="462c0819:PsiDirectoryNode" />
+              <item name="ssmschoolshop" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="OnlineSchoolShop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="OnlineSchoolShop" type="462c0819:PsiDirectoryNode" />
+              <item name="SpringbootSchoolShop" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="zhang" type="462c0819:PsiDirectoryNode" />
+              <item name="ssmschoolshop" type="462c0819:PsiDirectoryNode" />
+              <item name="util" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="OnlineSchoolShop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="OnlineSchoolShop" type="462c0819:PsiDirectoryNode" />
+              <item name="SpringbootSchoolShop" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="zhang" type="462c0819:PsiDirectoryNode" />
+              <item name="ssmschoolshop" type="462c0819:PsiDirectoryNode" />
+              <item name="util" type="462c0819:PsiDirectoryNode" />
+              <item name="verificate" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="OnlineSchoolShop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="OnlineSchoolShop" type="462c0819:PsiDirectoryNode" />
+              <item name="SpringbootSchoolShop" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="OnlineSchoolShop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="OnlineSchoolShop" type="462c0819:PsiDirectoryNode" />
+              <item name="SpringbootSchoolShop" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="mapper" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="OnlineSchoolShop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="OnlineSchoolShop" type="462c0819:PsiDirectoryNode" />
+              <item name="SpringbootSchoolShop" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="OnlineSchoolShop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="OnlineSchoolShop" type="462c0819:PsiDirectoryNode" />
+              <item name="SpringbootSchoolShop" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="OnlineSchoolShop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="OnlineSchoolShop" type="462c0819:PsiDirectoryNode" />
+              <item name="SpringbootSchoolShop" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="OnlineSchoolShop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="OnlineSchoolShop" type="462c0819:PsiDirectoryNode" />
+              <item name="SpringbootSchoolShop" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="OnlineSchoolShop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="OnlineSchoolShop" type="462c0819:PsiDirectoryNode" />
+              <item name="SpringbootSchoolShop" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="OnlineSchoolShop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="OnlineSchoolShop" type="462c0819:PsiDirectoryNode" />
+              <item name="SpringbootSchoolShop" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="OnlineSchoolShop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="OnlineSchoolShop" type="462c0819:PsiDirectoryNode" />
+              <item name="SpringbootSchoolShop" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="OnlineSchoolShop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="OnlineSchoolShop" type="462c0819:PsiDirectoryNode" />
+              <item name="SpringbootSchoolShop" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="zhang" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="OnlineSchoolShop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="OnlineSchoolShop" type="462c0819:PsiDirectoryNode" />
+              <item name="SpringbootSchoolShop" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="zhang" type="462c0819:PsiDirectoryNode" />
+              <item name="ssmschoolshop" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="OnlineSchoolShop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="OnlineSchoolShop" type="462c0819:PsiDirectoryNode" />
+              <item name="ssmschoolshop" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="OnlineSchoolShop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="OnlineSchoolShop" type="462c0819:PsiDirectoryNode" />
+              <item name="ssmschoolshop" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="OnlineSchoolShop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="OnlineSchoolShop" type="462c0819:PsiDirectoryNode" />
+              <item name="ssmschoolshop" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="OnlineSchoolShop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="OnlineSchoolShop" type="462c0819:PsiDirectoryNode" />
+              <item name="ssmschoolshop" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="OnlineSchoolShop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="OnlineSchoolShop" type="462c0819:PsiDirectoryNode" />
+              <item name="ssmschoolshop" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="OnlineSchoolShop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="OnlineSchoolShop" type="462c0819:PsiDirectoryNode" />
+              <item name="ssmschoolshop" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="PackagesPane" />
-      <pane id="CatdeaLogs" />
       <pane id="Scope" />
+      <pane id="CatdeaLogs" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -212,8 +508,11 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/SpringbootSchoolShop/pom.xml" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/SpringbootSchoolShop/src/main/webapp/js" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -227,7 +526,16 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.zhang.ssmschoolshop" />
+      <recent name="com.zhang.ssmschoolshop.controller.admin" />
+      <recent name="com.zhang.ssmschoolshop.service.impl" />
+      <recent name="com.zhang.ssmschoolshop.service" />
+      <recent name="com.zhang.ssmschoolshop.dao" />
+      <recent name="com.zhang.ssmschoolshop.entity" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\github\myproject\OnlineSchoolShop\SpringbootSchoolShop\src\main\webapp\js" />
+      <recent name="D:\github\myproject\OnlineSchoolShop\SpringbootSchoolShop\src\main\webapp\WEB-INF\views" />
+      <recent name="D:\github\myproject\OnlineSchoolShop\SpringbootSchoolShop\src\main\resources\mapper" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -242,7 +550,20 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Spring Boot.SpringbootSchoolShopApplication">
+    <configuration name="Verificate" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.zhang.ssmschoolshop.util.verificate.Verificate" />
+      <module name="SpringbootSchoolShop" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.zhang.ssmschoolshop.util.verificate.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="SpringbootSchoolShopApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="SpringbootSchoolShop" />
       <extension name="coverage">
@@ -259,6 +580,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="Spring Boot.SpringbootSchoolShopApplication" />
+        <item itemvalue="Application.Verificate" />
       </list>
     </recent_temporary>
   </component>
@@ -275,6 +597,8 @@
       <workItem from="1627096898868" duration="616000" />
       <workItem from="1627104853715" duration="989000" />
       <workItem from="1627118130692" duration="110000" />
+      <workItem from="1649934151887" duration="4996000" />
+      <workItem from="1650019245707" duration="4250000" />
     </task>
     <task id="LOCAL-00001" summary="V1.2增加新功能特性">
       <created>1627105452192</created>
@@ -294,13 +618,12 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4783000" />
+    <option name="totallyTimeSpent" value="14029000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="830" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49885583" visible="true" weight="0.25083837" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49885583" visible="true" weight="0.25670242" />
       <window_info id="Structure" order="1" sideWeight="0.5011442" side_tool="true" weight="0.25083837" />
       <window_info id="Designer" order="2" />
       <window_info id="JRebel" order="3" sideWeight="0.50206614" side_tool="true" weight="0.25083837" />
@@ -309,35 +632,37 @@
       <window_info id="UI Designer" order="6" />
       <window_info id="Favorites" order="7" side_tool="true" />
       <window_info id="Web" order="8" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32924962" />
-      <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49966466" visible="true" weight="0.45581394" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Spring" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49932975" weight="0.11627907" />
-      <window_info anchor="bottom" id="Docker" order="9" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50067025" side_tool="true" weight="0.32924962" />
-      <window_info anchor="bottom" id="Java Enterprise" order="11" />
-      <window_info anchor="bottom" id="Database Changes" order="12" />
-      <window_info anchor="bottom" id="Version Control" order="13" sideWeight="0.49932975" weight="0.60775197" />
-      <window_info anchor="bottom" id="JRebel Executor" order="14" />
-      <window_info anchor="bottom" id="JRebel Console" order="15" sideWeight="0.50033534" side_tool="true" weight="0.58449614" />
-      <window_info anchor="bottom" id="Messages" order="16" weight="0.32868218" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Maven" order="3" weight="0.3293092" />
-      <window_info anchor="right" id="Palette" order="4" />
-      <window_info anchor="right" id="Capture Analysis" order="5" />
-      <window_info anchor="right" id="aiXcoder" order="6" />
-      <window_info anchor="right" id="Database" order="7" weight="0.32997987" />
-      <window_info anchor="right" id="Theme Preview" order="8" />
-      <window_info anchor="right" id="Palette&#9;" order="9" />
-      <window_info anchor="right" id="Translate" order="10" />
-      <window_info anchor="right" id="Bean Validation" order="11" />
+      <window_info anchor="bottom" id="Statistic" order="0" weight="0.20775194" />
+      <window_info anchor="bottom" id="Message" order="1" />
+      <window_info anchor="bottom" id="Find" order="2" weight="0.32924962" />
+      <window_info anchor="bottom" id="Run" order="3" weight="0.33488372" />
+      <window_info active="true" anchor="bottom" id="Debug" order="4" sideWeight="0.49966466" visible="true" weight="0.49612403" />
+      <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="7" />
+      <window_info anchor="bottom" id="Spring" order="8" />
+      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49932975" weight="0.11627907" />
+      <window_info anchor="bottom" id="Docker" order="10" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50067025" side_tool="true" weight="0.32924962" />
+      <window_info anchor="bottom" id="Java Enterprise" order="12" />
+      <window_info anchor="bottom" id="Database Changes" order="13" />
+      <window_info anchor="bottom" id="Version Control" order="14" sideWeight="0.49932975" weight="0.19844961" />
+      <window_info anchor="bottom" id="JRebel Executor" order="15" />
+      <window_info anchor="bottom" id="JRebel Console" order="16" sideWeight="0.50033534" side_tool="true" weight="0.58449614" />
+      <window_info anchor="bottom" id="Messages" order="17" weight="0.32868218" />
+      <window_info anchor="right" id="SciView" order="0" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="1" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.25" />
+      <window_info anchor="right" id="Maven" order="4" weight="0.3293092" />
+      <window_info anchor="right" id="Palette" order="5" />
+      <window_info anchor="right" id="Capture Analysis" order="6" />
+      <window_info anchor="right" id="aiXcoder" order="7" />
+      <window_info anchor="right" id="Database" order="8" weight="0.32997987" />
+      <window_info anchor="right" id="Theme Preview" order="9" />
+      <window_info anchor="right" id="Palette&#9;" order="10" />
+      <window_info anchor="right" id="Translate" order="11" />
+      <window_info anchor="right" id="Bean Validation" order="12" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -391,143 +716,96 @@
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
+        <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/SpringbootSchoolShop/src/main/java/com/zhang/ssmschoolshop/controller/front/CustomerController.java</url>
-          <line>297</line>
+          <line>304</line>
           <properties />
           <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/SpringbootSchoolShop/src/main/java/com/zhang/ssmschoolshop/controller/admin/UserController.java</url>
+          <line>84</line>
+          <properties />
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/SpringbootSchoolShop/src/main/webapp/js/orderManage.js</url>
+          <line>62</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="15" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/1231.txt" />
-    <entry file="file://$PROJECT_DIR$/SpringbootSchoolShop/src/main/java/com/zhang/ssmschoolshop/Swagger2.java" />
-    <entry file="file://$PROJECT_DIR$/db_springbootshopmaster.sql">
+    <entry file="file://$PROJECT_DIR$/SpringbootSchoolShop/src/main/java/com/zhang/ssmschoolshop/dao/GoodsMapper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="8" column="29" selection-end-line="325" />
+        <state relative-caret-position="102">
+          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SpringbootSchoolShop/src/main/java/com/zhang/ssmschoolshop/SpringbootSchoolShopApplication.java">
+    <entry file="file://$PROJECT_DIR$/SpringbootSchoolShop/src/main/resources/mapper/GoodsMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="11" column="40" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="40" />
+        <state relative-caret-position="74">
+          <caret line="115" selection-start-line="115" selection-end-line="115" selection-end-column="117" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SpringbootSchoolShop/src/test/java/com/zhang/ssmschoolshop/SpringbootSchoolShopApplicationApplicationTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="12" column="32" lean-forward="true" selection-start-line="12" selection-start-column="32" selection-end-line="12" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SpringbootSchoolShop/src/main/java/com/zhang/ssmschoolshop/service/UserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SpringbootSchoolShop/src/main/java/com/zhang/ssmschoolshop/service/impl/GoodsServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="13" selection-start-line="13" selection-end-line="13" selection-end-column="24" />
+          <folding>
+            <element signature="e#1056#1057#0" expanded="true" />
+            <element signature="e#1124#1125#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SpringbootSchoolShop/src/main/java/com/zhang/ssmschoolshop/controller/admin/LoginController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+          <folding>
+            <element signature="method#confirmLogin#0;class#LoginController#0" />
+            <element signature="method#adminLogout#0;class#LoginController#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.1.6.RELEASE/spring-web-5.1.6.RELEASE.jar!/org/springframework/web/method/support/InvocableHandlerMethod.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="103">
+          <caret line="107" selection-start-line="107" selection-end-line="107" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/SpringbootSchoolShop/src/main/webapp/WEB-INF/views/verificationcodeimg.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="8" column="33" selection-start-line="8" selection-start-column="33" selection-end-line="8" selection-end-column="33" />
+        <state relative-caret-position="156">
+          <caret line="16" column="68" lean-forward="true" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="68" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SpringbootSchoolShop/pom.xml">
+    <entry file="file://$PROJECT_DIR$/SpringbootSchoolShop/src/main/java/com/zhang/ssmschoolshop/controller/admin/GoodsController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3969">
-          <caret line="147" column="42" selection-start-line="147" selection-start-column="42" selection-end-line="147" selection-end-column="42" />
-        </state>
-      </provider>
-      <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
-    </entry>
-    <entry file="file://D:/codingInstall/apache-maven-3.6.1-bin/apache-maven-3.6.1/conf/settings.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SpringbootSchoolShop/src/main/java/com/zhang/ssmschoolshop/entity/EmailSend.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ssmschoolshop/src/main/java/com/zhang/ssmschoolshop/util/ImageUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="117">
-          <caret line="22" column="7" lean-forward="true" selection-start-line="22" selection-start-column="7" selection-end-line="25" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="513">
-            <caret line="19" column="20" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="20" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SpringbootSchoolShop/src/main/java/com/zhang/ssmschoolshop/config/WebMvcConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="594">
-          <caret line="24" column="27" selection-start-line="24" selection-start-column="27" selection-end-line="24" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SpringbootSchoolShop/src/main/resources/application.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="551">
-          <caret line="61" selection-start-line="61" selection-end-line="61" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SpringbootSchoolShop/src/main/webapp/WEB-INF/views/adminAllGoods.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
-          <caret line="282" selection-start-line="282" selection-end-line="282" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SpringbootSchoolShop/src/main/webapp/WEB-INF/views/main.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="63" column="71" selection-start-line="63" selection-start-column="71" selection-end-line="63" selection-end-column="71" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SpringbootSchoolShop/src/main/webapp/WEB-INF/views/orderConfirm.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-9">
-          <caret line="47" column="27" lean-forward="true" selection-start-line="47" selection-start-column="27" selection-end-line="47" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SpringbootSchoolShop/src/main/webapp/WEB-INF/views/category.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="127" selection-start-line="127" selection-end-line="127" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SpringbootSchoolShop/src/main/webapp/WEB-INF/views/shopcart.jsp">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SpringbootSchoolShop/src/main/webapp/WEB-INF/views/addGoods.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="28" selection-start-line="28" selection-end-line="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SpringbootSchoolShop/src/main/java/com/zhang/ssmschoolshop/controller/front/OrderController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="149" column="35" lean-forward="true" selection-start-line="149" selection-start-column="35" selection-end-line="149" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_collections4_4_1.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SpringbootSchoolShop/src/main/java/com/zhang/ssmschoolshop/util/ExcelUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="126" lean-forward="true" selection-start-line="126" selection-end-line="126" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SpringbootSchoolShop/src/main/java/com/zhang/ssmschoolshop/controller/admin/ActivityController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="26" column="13" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
+        <state relative-caret-position="-2546">
+          <caret line="31" column="13" selection-start-line="31" selection-start-column="13" selection-end-line="31" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -541,121 +819,300 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SpringbootSchoolShop/src/main/java/com/zhang/ssmschoolshop/controller/admin/GoodsController.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/mybatis/spring/boot/mybatis-spring-boot-autoconfigure/1.3.1/mybatis-spring-boot-autoconfigure-1.3.1.jar!/org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="31" column="13" selection-start-line="31" selection-start-column="13" selection-end-line="31" selection-end-column="13" />
+        <state relative-caret-position="74">
+          <caret line="79" column="29" selection-start-line="79" selection-start-column="29" selection-end-line="79" selection-end-column="29" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SpringbootSchoolShop/src/main/java/com/zhang/ssmschoolshop/controller/admin/LoginController.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/javax/servlet/javax.servlet-api/4.0.1/javax.servlet-api-4.0.1.jar!/javax/servlet/ServletResponse.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+        <state relative-caret-position="156">
+          <caret line="16" column="24" selection-start-line="16" selection-start-column="24" selection-end-line="16" selection-end-column="24" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SpringbootSchoolShop/src/main/java/com/zhang/ssmschoolshop/controller/admin/UserController.java">
+    <entry file="file://$PROJECT_DIR$/SpringbootSchoolShop/src/main/java/com/zhang/ssmschoolshop/dao/ActivityMapper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+        <state relative-caret-position="57">
+          <caret line="7" column="22" lean-forward="true" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SpringbootSchoolShop/src/main/java/com/zhang/ssmschoolshop/controller/admin/AdminOrderController.java">
+    <entry file="file://$PROJECT_DIR$/SpringbootSchoolShop/src/main/resources/mapper/ActivityMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="64">
-          <caret line="42" column="36" lean-forward="true" selection-start-line="42" selection-start-column="36" selection-end-line="42" selection-end-column="36" />
+        <state relative-caret-position="-4542">
+          <caret line="2" column="63" lean-forward="true" selection-start-line="2" selection-start-column="63" selection-end-line="2" selection-end-column="63" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SpringbootSchoolShop/src/main/java/com/zhang/ssmschoolshop/service/impl/EmailServiceImpl.java">
+    <entry file="file://$PROJECT_DIR$/SpringbootSchoolShop/src/main/java/com/zhang/ssmschoolshop/service/impl/ActivityServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="334">
-          <caret line="48" column="22" lean-forward="true" selection-start-line="48" selection-start-column="22" selection-end-line="48" selection-end-column="22" />
+        <state relative-caret-position="55">
+          <caret line="12" column="10" selection-start-line="12" selection-start-column="10" selection-end-line="12" selection-end-column="10" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SpringbootSchoolShop/src/main/java/com/zhang/ssmschoolshop/service/EmailService.java">
+    <entry file="file://$PROJECT_DIR$/SpringbootSchoolShop/src/main/java/com/zhang/ssmschoolshop/controller/admin/ActivityController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="287">
-          <caret line="16" column="34" lean-forward="true" selection-start-line="16" selection-start-column="34" selection-end-line="16" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SpringbootSchoolShop/src/main/java/com/zhang/ssmschoolshop/service/OrderService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="15" column="23" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SpringbootSchoolShop/src/main/java/com/zhang/ssmschoolshop/service/impl/OrderServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="38" column="37" lean-forward="true" selection-start-line="38" selection-start-column="37" selection-end-line="38" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SpringbootSchoolShop/src/main/java/com/zhang/ssmschoolshop/dao/OrderMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="20" selection-start-line="20" selection-end-line="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ssmschoolshop/target/classes/mapper/OrderMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="90" column="11" lean-forward="true" selection-start-line="90" selection-start-column="11" selection-end-line="90" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SpringbootSchoolShop/src/main/java/com/zhang/ssmschoolshop/service/impl/GoodsServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="38" selection-start-line="38" selection-end-line="38" />
+        <state relative-caret-position="55">
+          <caret line="26" column="13" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
           <folding>
-            <element signature="e#1124#1125#0" expanded="true" />
+            <element signature="method#showActivity#0;class#ActivityController#0" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ssmschoolshop/src/main/webapp/WEB-INF/views/list.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="357" column="29" selection-start-line="357" selection-start-column="29" selection-end-line="363" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.1.6.RELEASE/spring-web-5.1.6.RELEASE.jar!/org/springframework/web/method/support/InvocableHandlerMethod.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="101" selection-start-line="101" selection-end-line="101" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/SpringbootSchoolShop/src/main/java/com/zhang/ssmschoolshop/controller/front/CustomerController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="301" selection-start-line="301" selection-end-line="301" />
+        <state relative-caret-position="233">
+          <caret line="307" column="45" lean-forward="true" selection-start-line="307" selection-start-column="45" selection-end-line="307" selection-end-column="45" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SpringbootSchoolShop/src/main/webapp/js/list.js">
+    <entry file="file://$PROJECT_DIR$/SpringbootSchoolShop/src/main/webapp/WEB-INF/views/address.jsp">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SpringbootSchoolShop/src/main/webapp/WEB-INF/views/adminAllGoods.jsp">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SpringbootSchoolShop/src/main/webapp/WEB-INF/views/admin.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="25" column="69" lean-forward="true" selection-start-line="25" selection-start-column="69" selection-end-line="25" selection-end-column="69" />
-        </state>
+        <state relative-caret-position="-3923" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SpringbootSchoolShop/src/main/webapp/WEB-INF/views/detail.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-6617" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/SpringbootSchoolShop/src/main/webapp/WEB-INF/views/list.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="107">
-          <caret line="358" column="113" selection-start-line="358" selection-start-column="113" selection-end-line="358" selection-end-column="113" />
+        <state relative-caret-position="202">
+          <caret line="363" column="32" lean-forward="true" selection-start-line="363" selection-start-column="32" selection-end-line="363" selection-end-column="32" />
           <folding>
             <element signature="n#c:forEach#0;n#jsp:root#0;n#!!top" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SpringbootSchoolShop/src/test/java/com/zhang/ssmschoolshop/OrderCodeTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="7" column="26" selection-start-line="7" selection-start-column="26" selection-end-line="7" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ssmschoolshop/src/main/webapp/WEB-INF/views/sidebar.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="23" column="133" lean-forward="true" selection-start-line="23" selection-end-line="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SpringbootSchoolShop/src/main/webapp/WEB-INF/views/activity.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="158" column="7" lean-forward="true" selection-start-line="158" selection-start-column="7" selection-end-line="158" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SpringbootSchoolShop/src/main/webapp/WEB-INF/views/userManage.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="68" column="31" lean-forward="true" selection-start-line="68" selection-start-column="31" selection-end-line="68" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/io/springfox/springfox-spring-web/2.7.0/springfox-spring-web-2.7.0.jar!/springfox/documentation/spring/web/plugins/DocumentationPluginsBootstrapper.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="36" column="13" selection-start-line="36" selection-start-column="13" selection-end-line="36" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/io/springfox/springfox-spring-web/2.7.0/springfox-spring-web-2.7.0.jar!/springfox/documentation/spring/web/plugins/WebMvcRequestHandlerProvider.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="25" column="13" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-autoconfigure/2.1.4.RELEASE/spring-boot-autoconfigure-2.1.4.RELEASE.jar!/org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="250" column="44" selection-start-line="250" selection-start-column="44" selection-end-line="250" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SpringbootSchoolShop/src/main/java/com/zhang/ssmschoolshop/controller/admin/OrderCodeController.java" />
+    <entry file="file://$PROJECT_DIR$/ssmschoolshop/target/classes/mapper/CategoryMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="59">
+          <caret line="82" column="2" selection-start-line="82" selection-start-column="2" selection-end-line="82" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SpringbootSchoolShop/src/main/java/com/zhang/ssmschoolshop/dao/CategoryMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="287">
+          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SpringbootSchoolShop/src/main/resources/mapper/CategoryMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1140" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SpringbootSchoolShop/src/main/java/com/zhang/ssmschoolshop/service/CommentService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SpringbootSchoolShop/src/main/java/com/zhang/ssmschoolshop/entity/CommentExample.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SpringbootSchoolShop/src/main/resources/mapper/CommentMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="75" column="14" lean-forward="true" selection-start-line="75" selection-start-column="14" selection-end-line="75" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SpringbootSchoolShop/src/main/java/com/zhang/ssmschoolshop/dao/CommentMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="20" column="18" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SpringbootSchoolShop/src/main/java/com/zhang/ssmschoolshop/service/impl/CommentServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="25" column="37" selection-start-line="25" selection-start-column="37" selection-end-line="25" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SpringbootSchoolShop/src/main/java/com/zhang/ssmschoolshop/service/OrderCodeService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SpringbootSchoolShop/src/main/java/com/zhang/ssmschoolshop/util/verificate/Verificate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1368">
+          <caret line="77" column="5" selection-start-line="77" selection-start-column="5" selection-end-line="77" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SpringbootSchoolShop/src/main/java/com/zhang/ssmschoolshop/service/impl/OrderCodeServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="392">
+          <caret line="34" column="43" selection-start-line="34" selection-start-column="27" selection-end-line="34" selection-end-column="43" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#945#946#0" expanded="true" />
+            <element signature="e#1002#1003#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SpringbootSchoolShop/src/main/webapp/js/userManage.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="88" column="38" lean-forward="true" selection-start-line="88" selection-start-column="38" selection-end-line="88" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SpringbootSchoolShop/src/main/java/com/zhang/ssmschoolshop/SpringbootSchoolShopApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="258">
+          <caret line="20" column="26" selection-start-line="20" selection-start-column="26" selection-end-line="20" selection-end-column="26" />
+          <folding>
+            <element signature="e#807#808#0" expanded="true" />
+            <element signature="e#889#890#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SpringbootSchoolShop/src/main/java/com/zhang/ssmschoolshop/controller/admin/AdminOrderController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-108">
+          <caret line="35" column="14" lean-forward="true" selection-start-line="35" selection-start-column="14" selection-end-line="35" selection-end-column="14" />
+          <folding>
+            <element signature="method#sendOrder#0;class#AdminOrderController#0" />
+            <element signature="method#sendGoods#0;class#AdminOrderController#0" />
+            <element signature="method#receiveOrder#0;class#AdminOrderController#0" />
+            <element signature="method#completeOrder#0;class#AdminOrderController#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SpringbootSchoolShop/src/main/java/com/zhang/ssmschoolshop/dao/OrderCodeMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="21" column="26" selection-start-line="21" selection-start-column="26" selection-end-line="21" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SpringbootSchoolShop/src/main/resources/mapper/OrderCodeMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="21">
+          <caret line="23" column="12" selection-start-line="23" selection-start-column="12" selection-end-line="23" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SpringbootSchoolShop/src/main/webapp/WEB-INF/views/sidebar.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="293">
+          <caret line="21" column="79" selection-start-line="21" selection-start-column="71" selection-end-line="21" selection-end-column="79" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SpringbootSchoolShop/src/main/java/com/zhang/ssmschoolshop/entity/OrderCode.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="14" column="23" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SpringbootSchoolShop/src/main/webapp/WEB-INF/views/orderCodeManage.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2550">
+          <caret line="143" column="56" lean-forward="true" selection-start-line="143" selection-start-column="56" selection-end-line="143" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SpringbootSchoolShop/src/main/webapp/js/orderManage.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="48" column="43" lean-forward="true" selection-start-line="48" selection-start-column="43" selection-end-line="48" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SpringbootSchoolShop/src/main/java/com/zhang/ssmschoolshop/controller/admin/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="54" column="37" selection-start-line="54" selection-start-column="37" selection-end-line="54" selection-end-column="37" />
         </state>
       </provider>
     </entry>
