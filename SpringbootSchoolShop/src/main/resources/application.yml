@@ -18,7 +18,19 @@ spring:
        view:
          prefix: /WEB-INF/views/
          suffix: .jsp
-
+  #rabbitmq
+     rabbitmq:
+       host:  127.0.0.1
+       port:   5672
+       username:  guest
+       password:  guest
+       ## 消息发送确认机制
+       publisher-confirm-type:  correlated
+       publisher-returns:  true
+    ## 消息回复确认机制
+     listener:
+      simple:
+         acknowledge-mode:  manual
 
 mybatis:
   mapper-locations: classpath:mapper/*.xml
