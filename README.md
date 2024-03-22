@@ -1,7 +1,7 @@
 **OnlineSchoolShop-基于Spring boot/SSM商城的搭建教程**
 
 加微信18229819406，提供有偿定制化修改
-
+疑难代码问题，也可以加微信提供指导，包括问题定位，代码运行，服务改写
 微信公众号 codingzx  ，后台留言答疑   [承接微信公众号后台开发]
 
 > API接口访问  http://127.0.0.1:8081/shop/swagger-ui.html
